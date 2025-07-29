@@ -1,0 +1,74 @@
+/* Modern Theme Variables */
+:root {
+    --primary: #6366f1;
+    --secondary: #f59e0b;
+    --accent: #10b981;
+    --background: #0f172a;
+    --surface: #1e293b;
+    --text-color: #f8fafc;
+    --text-muted: #94a3b8;
+    --border: #334155;
+}
+
+.theme-light {
+    --primary: #6366f1;
+    --secondary: #f59e0b;
+    --accent: #10b981;
+    --background: #f8fafc;
+    --surface: #ffffff;
+    --text-color: #1e293b;
+    --text-muted: #64748b;
+    --border: #e2e8f0;
+}
+
+.theme-dark {
+    --primary: #6366f1;
+    --secondary: #f59e0b;
+    --accent: #10b981;
+    --background: #0f172a;
+    --surface: #1e293b;
+    --text-color: #f8fafc;
+    --text-muted: #94a3b8;
+    --border: #334155;
+}
+
+.theme-vibrant {
+    --primary: #ec4899;
+    --secondary: #8b5cf6;
+    --accent: #06b6d4;
+    --background: #1e1b4b;
+    --surface: #312e81;
+    --text-color: #f1f5f9;
+    --text-muted: #cbd5e1;
+    --border: #475569;
+}
+
+.theme-pastel {
+    --primary: #a855f7;
+    --secondary: #f472b6;
+    --accent: #34d399;
+    --background: #fdf4ff;
+    --surface: #fef7ff;
+    --text-color: #581c87;
+    --text-muted: #9333ea;
+    --border: #e9d5ff;
+}
+
+/* Example usage of theme variables */
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+h1, h2, h3 {
+    color: var(--primary-color);
+}
+
+a {
+    color: var(--accent-color);
+}
+
+button {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+}

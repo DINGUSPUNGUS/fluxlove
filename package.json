@@ -1,0 +1,24 @@
+{
+  "name": "creative-portfolio-site",
+  "version": "1.0.0",
+  "description": "A personal website to showcase art, videos, poetry, and creativity.",
+  "main": "src/index.html",
+  "scripts": {
+    "start": "live-server src",
+    "build": "echo 'Build step can be added here'",
+    "test": "echo 'Test step can be added here'"
+  },
+  "keywords": [
+    "portfolio",
+    "art",
+    "videos",
+    "poetry",
+    "creative"
+  ],
+  "author": "Client Name",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  }
+}
