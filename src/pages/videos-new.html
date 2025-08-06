@@ -48,86 +48,74 @@
 
       <section class="video-categories">
         <div class="category-grid">
+          <!-- Short Films Section (Most Content) -->
           <div class="category-card">
-            <h3>Animations</h3>
-            <p>Creative animations exploring movement, emotion, and storytelling through motion graphics</p>
-            
-            <!-- Video Grid for Animations -->
-            <div id="animations-grid" class="video-grid">
-              <!-- Videos will be populated here by JavaScript -->
+            <div class="card-header">
+              <h3>Short Films</h3>
+              <p>Narrative and documentary short films exploring contemporary themes and human experiences</p>
             </div>
             
-            <!-- Embedded Video Player -->
-            <div class="video-player-container">
-              <div class="video-embed" id="animation-player">
-                <!-- Individual video will be embedded here -->
+            <div class="card-content">
+              <!-- Video Grid for Short Films -->
+              <div id="shortfilms-grid" class="video-grid uniform-grid">
+                <!-- Videos will be populated here by JavaScript -->
               </div>
-            </div>
-            
-            <div class="video-list">
-              <div class="video-item">
-                <div class="video-info">
-                  <h4>Animation Portfolio</h4>
-                  <p>Collection of original animated works showcasing technical skill and creative vision</p>
-                  <a href="../assets/Films/Films/Animations/Animations - Fluxlove.docx" class="btn btn-secondary" download>View Project Details</a>
-                  <button class="btn btn-primary" onclick="loadAnimationVideos()">Load Animation Videos</button>
-                </div>
+              
+              <div class="video-actions">
+                <a href="../assets/Films/Films/Short Films/Short Films - Fluxlove.docx" class="btn btn-secondary" download>
+                  📄 View Project Details
+                </a>
+                <button class="btn btn-primary" onclick="loadShortFilmVideos()">
+                  ▶️ Load Short Films
+                </button>
               </div>
             </div>
           </div>
 
+          <!-- The Bigger Picture Section (Travel Documentaries) -->
           <div class="category-card">
-            <h3>Short Films</h3>
-            <p>Narrative and documentary short films exploring contemporary themes and human experiences</p>
-            
-            <!-- Video Grid for Short Films -->
-            <div id="shortfilms-grid" class="video-grid">
-              <!-- Videos will be populated here by JavaScript -->
+            <div class="card-header">
+              <h3>The Bigger Picture</h3>
+              <p>Feature-length projects and comprehensive documentary work exploring complex social narratives</p>
             </div>
             
-            <!-- Embedded Video Player -->
-            <div class="video-player-container">
-              <div class="video-embed" id="shortfilm-player">
-                <!-- Individual video will be embedded here -->
+            <div class="card-content">
+              <!-- Video Grid for The Bigger Picture -->
+              <div id="bigpicture-grid" class="video-grid uniform-grid">
+                <!-- Videos will be populated here by JavaScript -->
               </div>
-            </div>
-            
-            <div class="video-list">
-              <div class="video-item">
-                <div class="video-info">
-                  <h4>Short Film Collection</h4>
-                  <p>Original short films featuring compelling narratives and innovative cinematography</p>
-                  <a href="../assets/Films/Films/Short Films/Short Films - Fluxlove.docx" class="btn btn-secondary" download>View Project Details</a>
-                  <button class="btn btn-primary" onclick="loadShortFilmVideos()">Load Short Film Videos</button>
-                </div>
+              
+              <div class="video-actions">
+                <a href="../assets/Films/Films/The Bigger Picture/The Bigger Picture - Fluxlove.docx" class="btn btn-secondary" download>
+                  📄 View Project Details
+                </a>
+                <button class="btn btn-primary" onclick="loadBigPictureVideos()">
+                  ▶️ Load Documentaries
+                </button>
               </div>
             </div>
           </div>
 
-          <div class="category-card">
-            <h3>The Bigger Picture</h3>
-            <p>Feature-length projects and comprehensive documentary work exploring complex social narratives</p>
-            
-            <!-- Video Grid for The Bigger Picture -->
-            <div id="bigpicture-grid" class="video-grid">
-              <!-- Videos will be populated here by JavaScript -->
+          <!-- Animations Section (Single Video - Bottom) -->
+          <div class="category-card single-video-card">
+            <div class="card-header">
+              <h3>Animations</h3>
+              <p>Creative animations exploring movement, emotion, and storytelling through motion graphics</p>
             </div>
             
-            <!-- Embedded Video Player -->
-            <div class="video-player-container">
-              <div class="video-embed" id="bigpicture-player">
-                <!-- Individual video will be embedded here -->
+            <div class="card-content">
+              <!-- Video Grid for Animations -->
+              <div id="animations-grid" class="video-grid uniform-grid">
+                <!-- Videos will be populated here by JavaScript -->
               </div>
-            </div>
-            
-            <div class="video-list">
-              <div class="video-item">
-                <div class="video-info">
-                  <h4>The Bigger Picture</h4>
-                  <p>Documentary and narrative works that examine broader social and cultural themes</p>
-                  <a href="../assets/Films/Films/The Bigger Picture/The Bigger Picture - Fluxlove.docx" class="btn btn-secondary" download>View Project Details</a>
-                  <button class="btn btn-primary" onclick="loadBigPictureVideos()">Load Documentary Videos</button>
-                </div>
+              
+              <div class="video-actions">
+                <a href="../assets/Films/Films/Animations/Animations - Fluxlove.docx" class="btn btn-secondary" download>
+                  📄 View Project Details
+                </a>
+                <button class="btn btn-primary" onclick="loadAnimationVideos()">
+                  ▶️ Load Animation
+                </button>
               </div>
             </div>
           </div>

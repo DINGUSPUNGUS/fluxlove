@@ -2134,38 +2134,27 @@ html {
   margin-left: 0.2rem;
 }
 
-/* ===== PROFESSIONAL LAYOUT IMPROVEMENTS ===== */
+/* ===== UNIFORM LAYOUT SYSTEM ===== */
 
-/* Improved Grid Systems for Symmetry */
-.writing-collections .collection-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
-    gap: 2rem;
-    margin: 2rem 0;
-}
-
-.category-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
-    gap: 2rem;
-    margin: 2rem 0;
-}
-
+/* Perfect Grid Systems with Equal Spacing */
+.writing-collections .collection-grid,
+.category-grid,
 .overview-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: 2rem;
-    margin: 2rem 0;
+    margin: 3rem 0;
+    align-items: start;
 }
 
-/* Professional Card Consistency */
+/* Uniform Card Structure */
 .collection-card, .category-card, .overview-card {
     background: var(--surface-color);
     border-radius: 16px;
-    padding: 2rem;
+    padding: 0;
     border: 1px solid var(--border-color);
     transition: all 0.3s ease;
-    min-height: 420px;
+    min-height: 500px;
     display: flex;
     flex-direction: column;
     position: relative;
@@ -2178,13 +2167,88 @@ html {
     border-color: var(--primary-color);
 }
 
-/* Equal Height Cards */
-.collection-card h3, .category-card h3, .overview-card h3 {
+/* Card Header Structure */
+.card-header {
+    padding: 2rem 2rem 1rem 2rem;
+    border-bottom: 1px solid var(--border-color);
+    background: var(--surface-color);
+}
+
+.card-header h3 {
     font-size: 1.5rem;
     font-weight: 600;
-    margin-bottom: 1rem;
+    margin: 0 0 0.75rem 0;
     color: var(--text-primary);
     min-height: 2rem;
+}
+
+.card-header p {
+    color: var(--text-secondary);
+    margin: 0;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+/* Card Content Structure */
+.card-content {
+    padding: 2rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Perfect Video Grid Spacing */
+.uniform-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin: 0 0 2rem 0;
+    align-items: start;
+}
+
+.uniform-grid .video-thumbnail {
+    background: var(--surface);
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+    aspect-ratio: 16/9;
+    position: relative;
+}
+
+.uniform-grid .video-thumbnail:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Uniform Action Buttons */
+.video-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: auto;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.video-actions .btn {
+    flex: 1;
+    text-align: center;
+    font-size: 0.9rem;
+    padding: 0.75rem 1rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Single Video Card Adjustments */
+.single-video-card {
+    min-height: 400px;
+}
+
+.single-video-card .uniform-grid {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+    margin: 0 auto 2rem auto;
 }
 
 .collection-card p, .category-card p, .overview-card p {
@@ -2287,15 +2351,19 @@ html {
 }
 
 .paper-links {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 0.75rem;
-    flex-wrap: wrap;
     align-items: center;
 }
 
 .paper-links .btn {
     font-size: var(--font-sm);
     padding: 0.5rem 1rem;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .coming-soon {
@@ -2315,13 +2383,48 @@ html {
         gap: 1.5rem;
     }
     
+    .uniform-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .collection-card, .category-card, .overview-card {
+        min-height: unset;
+    }
+    
+    .card-header,
+    .card-content {
+        padding: 1.5rem;
+    }
+    
     .paper-links {
-        flex-direction: column;
-        align-items: stretch;
+        grid-template-columns: 1fr;
     }
     
     .paper-links .btn {
         text-align: center;
+    }
+    
+    .video-actions {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .card-header,
+    .card-content {
+        padding: 1rem;
+    }
+    
+    .uniform-grid {
+        gap: 0.75rem;
+    }
+    
+    .collection-grid,
+    .category-grid,
+    .overview-grid {
+        gap: 1rem;
     }
 }
 
