@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Portfolio - Home</title>
+    <link rel="stylesheet" href="src/css/main.css">
+    <link rel="stylesheet" href="src/css/animations.css">
+    <link rel="stylesheet" href="src/css/themes.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Animated background -->
+    <div class="animated-bg"></div>
+    
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <div class="logo">
+                <h1>fluxlove</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="src/pages/art-new.html" class="nav-link">Art</a></li>
+                <li><a href="src/pages/videos-new.html" class="nav-link">Films</a></li>
+                <li><a href="src/pages/music-new.html" class="nav-link">Music</a></li>
+                <li><a href="src/pages/poetry-new.html" class="nav-link">Writing</a></li>
+                <li><a href="src/pages/strategic-communicator.html" class="nav-link">Professional</a></li>
+                <li><a href="src/pages/visual-storyteller.html" class="nav-link">Storytelling</a></li>
+                <li><a href="src/pages/education.html" class="nav-link">Education</a></li>
+                <li><a href="src/pages/awards.html" class="nav-link">Awards</a></li>
+                <li><a href="src/pages/volunteering.html" class="nav-link">Volunteering</a></li>
+                <li><a href="src/pages/about-new.html" class="nav-link">About</a></li>
+            </ul>
+            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+                <span class="theme-icon"></span>
+                <span class="theme-text">Professional</span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">fluxlove</h1>
+            <p class="hero-subtitle">Strategic Communicator • Visual Storyteller • Artist</p>
+            <p class="hero-tagline">Where Creativity Meets Strategy</p>
+            <p class="hero-description">
+                A multidisciplinary creative professional combining strategic communication expertise 
+                with artistic vision to craft compelling narratives across digital, visual, and written mediums.
+            </p>
+            <div class="hero-buttons">
+                <a href="#portfolio" class="btn btn-primary">View Portfolio</a>
+                <a href="src/pages/about-new.html" class="btn btn-secondary">About Me</a>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="geometric-art"></div>
+        </div>
+    </section>
+
+    <!-- Portfolio Preview -->
+    <section id="portfolio" class="portfolio-preview">
+        <div class="container">
+            <h2 class="section-title">Creative Portfolio</h2>
+            <p class="section-subtitle">Explore my work across various creative disciplines</p>
+            
+            <div class="portfolio-grid">
+                <div class="portfolio-card" data-theme="creative">
+                    <div class="card-image art-preview"></div>
+                    <div class="card-content">
+                        <h3>Visual Art</h3>
+                        <p>Digital illustrations, traditional paintings, and mixed media explorations</p>
+                        <a href="src/pages/art-new.html" class="btn btn-outline">View Gallery</a>
+                    </div>
+                </div>
+
+                <div class="portfolio-card" data-theme="professional">
+                    <div class="card-image video-preview"></div>
+                    <div class="card-content">
+                        <h3>Film & Video</h3>
+                        <p>Documentary work, narrative films, and creative video content</p>
+                        <a href="src/pages/videos-new.html" class="btn btn-outline">Watch Films</a>
+                    </div>
+                </div>
+
+                <div class="portfolio-card" data-theme="party">
+                    <div class="card-image music-preview"></div>
+                    <div class="card-content">
+                        <h3>Music & Performance</h3>
+                        <p>Live performances, collaborations, and musical storytelling</p>
+                        <a href="src/pages/music-new.html" class="btn btn-outline">Listen Now</a>
+                    </div>
+                </div>
+
+                <div class="portfolio-card" data-theme="creative">
+                    <div class="card-image writing-preview"></div>
+                    <div class="card-content">
+                        <h3>Academic Writing</h3>
+                        <p>Critical essays, research papers, and scholarly discourse</p>
+                        <a href="src/pages/poetry-new.html" class="btn btn-outline">Read Work</a>
+                    </div>
+                </div>
+
+                <div class="portfolio-card" data-theme="professional">
+                    <div class="card-image professional-preview"></div>
+                    <div class="card-content">
+                        <h3>Professional Work</h3>
+                        <p>Strategic communication, brand development, and consulting</p>
+                        <a href="src/pages/strategic-communicator.html" class="btn btn-outline">View Experience</a>
+                    </div>
+                </div>
+
+                <div class="portfolio-card" data-theme="party">
+                    <div class="card-image story-preview"></div>
+                    <div class="card-content">
+                        <h3>Visual Storytelling</h3>
+                        <p>Narrative design, content strategy, and multimedia experiences</p>
+                        <a href="src/pages/visual-storyteller.html" class="btn btn-outline">Explore Stories</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-preview">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>About fluxlove</h2>
+                    <p>
+                        I'm a multidisciplinary creative professional who thrives at the intersection of art, 
+                        strategy, and storytelling. With expertise spanning visual arts, film production, 
+                        academic writing, and strategic communication, I bring a unique perspective to every project.
+                    </p>
+                    <p>
+                        My work is driven by a passion for authentic storytelling and meaningful connection, 
+                        whether through a documentary film, a strategic campaign, or an intimate piece of art.
+                    </p>
+                    <a href="src/pages/about-new.html" class="btn btn-primary">Learn More</a>
+                </div>
+                <div class="about-image">
+                    <div class="profile-placeholder"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2025 fluxlove. Designed with passion and precision.</p>
+        </div>
+    </footer>
+
+    <script src="src/js/main.js"></script>
+    <script src="src/js/animations.js"></script>
+</body>
+</html>

@@ -4,8 +4,9 @@
   "description": "A personal website to showcase art, videos, poetry, and creativity.",
   "main": "src/index.html",
   "scripts": {
-    "start": "live-server src",
-    "build": "echo 'Build step can be added here'",
+    "start": "live-server .",
+    "dev": "live-server src",
+    "build": "echo 'Static site - no build needed'",
     "test": "echo 'Test step can be added here'"
   },
   "keywords": [
