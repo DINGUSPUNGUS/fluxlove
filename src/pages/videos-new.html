@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="../css/main.css">
   <link rel="stylesheet" href="../css/animations.css">
   <link rel="stylesheet" href="../css/themes.css">
+  <link rel="stylesheet" href="../css/video-player.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -23,6 +24,7 @@
         <li><a href="../index.html" class="nav-link">Home</a></li>
         <li><a href="art-new.html" class="nav-link">Art</a></li>
         <li><a href="videos-new.html" class="nav-link active">Films</a></li>
+        <li><a href="music-new.html" class="nav-link">Music</a></li>
         <li><a href="poetry-new.html" class="nav-link">Writing</a></li>
         <li><a href="strategic-communicator.html" class="nav-link">Professional</a></li>
         <li><a href="visual-storyteller.html" class="nav-link">Storytelling</a></li>
@@ -47,63 +49,84 @@
       <section class="video-categories">
         <div class="category-grid">
           <div class="category-card">
+            <h3>Animations</h3>
+            <p>Creative animations exploring movement, emotion, and storytelling through motion graphics</p>
+            
+            <!-- Video Grid for Animations -->
+            <div id="animations-grid" class="video-grid">
+              <!-- Videos will be populated here by JavaScript -->
+            </div>
+            
+            <!-- Embedded Video Player -->
+            <div class="video-player-container">
+              <div class="video-embed" id="animation-player">
+                <!-- Individual video will be embedded here -->
+              </div>
+            </div>
+            
+            <div class="video-list">
+              <div class="video-item">
+                <div class="video-info">
+                  <h4>Animation Portfolio</h4>
+                  <p>Collection of original animated works showcasing technical skill and creative vision</p>
+                  <a href="../assets/Films/Films/Animations/Animations - Fluxlove.docx" class="btn btn-secondary" download>View Project Details</a>
+                  <button class="btn btn-primary" onclick="loadAnimationVideos()">Load Animation Videos</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="category-card">
             <h3>Short Films</h3>
-            <p>Narrative short films exploring themes of identity, creativity, and human connection</p>
+            <p>Narrative and documentary short films exploring contemporary themes and human experiences</p>
+            
+            <!-- Video Grid for Short Films -->
+            <div id="shortfilms-grid" class="video-grid">
+              <!-- Videos will be populated here by JavaScript -->
+            </div>
+            
+            <!-- Embedded Video Player -->
+            <div class="video-player-container">
+              <div class="video-embed" id="shortfilm-player">
+                <!-- Individual video will be embedded here -->
+              </div>
+            </div>
+            
             <div class="video-list">
               <div class="video-item">
-                <div class="video-placeholder video"></div>
                 <div class="video-info">
-                  <h4>"Fragments of Light"</h4>
-                  <p>A poetic exploration of memory and time • 8 min</p>
-                </div>
-              </div>
-              <div class="video-item">
-                <div class="video-placeholder video"></div>
-                <div class="video-info">
-                  <h4>"Urban Canvas"</h4>
-                  <p>Street art comes alive in this vibrant documentary • 12 min</p>
+                  <h4>Short Film Collection</h4>
+                  <p>Original short films featuring compelling narratives and innovative cinematography</p>
+                  <a href="../assets/Films/Films/Short Films/Short Films - Fluxlove.docx" class="btn btn-secondary" download>View Project Details</a>
+                  <button class="btn btn-primary" onclick="loadShortFilmVideos()">Load Short Film Videos</button>
                 </div>
               </div>
             </div>
           </div>
 
           <div class="category-card">
-            <h3>Creative Projects</h3>
-            <p>Experimental video art and multimedia installations</p>
-            <div class="video-list">
-              <div class="video-item">
-                <div class="video-placeholder video"></div>
-                <div class="video-info">
-                  <h4>"Color in Motion"</h4>
-                  <p>Abstract visual symphony • 5 min</p>
-                </div>
-              </div>
-              <div class="video-item">
-                <div class="video-placeholder video"></div>
-                <div class="video-info">
-                  <h4>"Digital Dreams"</h4>
-                  <p>Mixed reality art piece • 7 min</p>
-                </div>
+            <h3>The Bigger Picture</h3>
+            <p>Feature-length projects and comprehensive documentary work exploring complex social narratives</p>
+            
+            <!-- Video Grid for The Bigger Picture -->
+            <div id="bigpicture-grid" class="video-grid">
+              <!-- Videos will be populated here by JavaScript -->
+            </div>
+            
+            <!-- Embedded Video Player -->
+            <div class="video-player-container">
+              <div class="video-embed" id="bigpicture-player">
+                <!-- Individual video will be embedded here -->
               </div>
             </div>
-          </div>
-
-          <div class="category-card">
-            <h3>Professional Work</h3>
-            <p>Commercial and corporate video content</p>
+            
             <div class="video-list">
               <div class="video-item">
-                <div class="video-placeholder video"></div>
                 <div class="video-info">
-                  <h4>"Brand Story Series"</h4>
-                  <p>Corporate storytelling campaign • Various lengths</p>
-                </div>
-              </div>
-              <div class="video-item">
-                <div class="video-placeholder video"></div>
-                <div class="video-info">
-                  <h4>"Community Voices"</h4>
-                  <p>Non-profit awareness campaign • 3 min</p>
+                  <h4>The Bigger Picture</h4>
+                  <p>Documentary and narrative works that examine broader social and cultural themes</p>
+                  <a href="../assets/Films/Films/The Bigger Picture/The Bigger Picture - Fluxlove.docx" class="btn btn-secondary" download>View Project Details</a>
+                  <button class="btn btn-primary" onclick="loadBigPictureVideos()">Load Documentary Videos</button>
                 </div>
               </div>
             </div>
@@ -114,10 +137,16 @@
       <section class="featured-video">
         <h2 class="section-title">Featured Video</h2>
         <div class="featured-video-container">
-          <div class="video-player-placeholder">
-            <div class="play-button video"></div>
-            <h3>"The Art of Becoming"</h3>
-            <p>A personal documentary about the creative journey</p>
+          <div class="video-player-container">
+            <div class="video-embed" id="featured-video-player">
+              <!-- Featured video will be embedded here -->
+              <div class="video-placeholder">
+                <div class="play-button video"></div>
+                <h3>"The Art of Becoming"</h3>
+                <p>A personal documentary about the creative journey</p>
+                <button class="btn btn-primary" onclick="loadFeaturedVideo()">Play Featured Video</button>
+              </div>
+            </div>
           </div>
           <div class="video-description">
             <h4>About This Video</h4>
@@ -140,5 +169,167 @@
   </footer>
 
   <script src="../js/main.js"></script>
+  <script src="../js/video-player.js"></script>
+  <script>
+    // Video data - YOUR ACTUAL VIDEO URLS
+    const videoData = {
+      animations: [
+        {
+          url: 'https://www.youtube.com/watch?v=V9FW4nOweGM',
+          title: 'Spaghetti Dance',
+          description: 'Creative animation exploring movement and rhythm through playful character motion',
+          thumbnail: 'https://img.youtube.com/vi/V9FW4nOweGM/maxresdefault.jpg'
+        }
+      ],
+      shortFilms: [
+        {
+          url: 'https://youtu.be/1ufRKmfpHrQ',
+          title: 'Stuffing',
+          description: 'A narrative exploration of comfort, tradition, and family dynamics',
+          thumbnail: 'https://img.youtube.com/vi/1ufRKmfpHrQ/maxresdefault.jpg'
+        },
+        {
+          url: 'https://youtu.be/3vqPtvDG-bU',
+          title: 'Shame',
+          description: 'An intimate portrait examining vulnerability and human emotion',
+          thumbnail: 'https://img.youtube.com/vi/3vqPtvDG-bU/maxresdefault.jpg'
+        },
+        {
+          url: 'https://youtu.be/2oIAy_Cpy2U',
+          title: "You're So Nice",
+          description: 'A character study exploring kindness and social interaction',
+          thumbnail: 'https://img.youtube.com/vi/2oIAy_Cpy2U/maxresdefault.jpg'
+        },
+        {
+          url: 'https://youtu.be/tMzbOvr8FU8',
+          title: 'Powerless',
+          description: 'A dramatic piece examining themes of agency and control',
+          thumbnail: 'https://img.youtube.com/vi/tMzbOvr8FU8/maxresdefault.jpg'
+        },
+        {
+          url: 'https://youtu.be/hRbZKgEQcMs',
+          title: 'GAIA',
+          description: 'An environmental narrative connecting humanity with nature',
+          thumbnail: 'https://img.youtube.com/vi/hRbZKgEQcMs/maxresdefault.jpg'
+        }
+      ],
+      bigPicture: [
+        {
+          url: 'https://youtu.be/REJqvWDosLc',
+          title: 'Japan: Intro',
+          description: 'Opening journey into Japanese culture and landscapes',
+          thumbnail: 'https://img.youtube.com/vi/REJqvWDosLc/maxresdefault.jpg'
+        },
+        {
+          url: 'https://youtu.be/ko5IeRL1ku8',
+          title: 'Koyasan',
+          description: 'Sacred mountain monastery and spiritual center',
+          thumbnail: 'https://img.youtube.com/vi/ko5IeRL1ku8/maxresdefault.jpg'
+        },
+        {
+          url: 'https://youtu.be/Qv77Jtzh83M',
+          title: 'Koyasan Snowy Morning',
+          description: 'Serene winter morning at the sacred mountain',
+          thumbnail: 'https://img.youtube.com/vi/Qv77Jtzh83M/maxresdefault.jpg'
+        },
+        {
+          url: 'https://youtu.be/XsXQPQPtHUs',
+          title: 'Wakayama Castle',
+          description: 'Historic castle and architectural marvel',
+          thumbnail: 'https://img.youtube.com/vi/XsXQPQPtHUs/maxresdefault.jpg'
+        },
+        {
+          url: 'https://youtu.be/2h0qJOv9MvE',
+          title: 'Fushimi Inari Taisha',
+          description: 'Thousand torii gates shrine experience',
+          thumbnail: 'https://img.youtube.com/vi/2h0qJOv9MvE/maxresdefault.jpg'
+        },
+        {
+          url: 'https://youtu.be/CeLAaLn2MEY',
+          title: 'Bullet Train',
+          description: 'High-speed rail journey through Japan',
+          thumbnail: 'https://img.youtube.com/vi/CeLAaLn2MEY/maxresdefault.jpg'
+        },
+        {
+          url: 'https://youtu.be/5CNyMCCsL4A',
+          title: 'Singapore: Artscience Museum',
+          description: 'Modern architecture and cultural exploration',
+          thumbnail: 'https://img.youtube.com/vi/5CNyMCCsL4A/maxresdefault.jpg'
+        },
+        {
+          url: 'https://youtu.be/cXHVQ77rAXs',
+          title: 'Singapore: Bishan Park',
+          description: 'Urban nature and park landscapes',
+          thumbnail: 'https://img.youtube.com/vi/cXHVQ77rAXs/maxresdefault.jpg'
+        },
+        {
+          url: 'https://youtu.be/kayjRiO_dNo',
+          title: 'Indonesia: West Java',
+          description: 'Cultural exploration of West Java landscapes',
+          thumbnail: 'https://img.youtube.com/vi/kayjRiO_dNo/maxresdefault.jpg'
+        },
+        {
+          url: 'https://youtu.be/A2xZQwJoyAQ',
+          title: 'Gunung Padang',
+          description: 'Ancient archaeological site exploration',
+          thumbnail: 'https://img.youtube.com/vi/A2xZQwJoyAQ/maxresdefault.jpg'
+        },
+        {
+          url: 'https://youtu.be/Oy4sr1zuKCw',
+          title: 'Bali',
+          description: 'Island paradise and cultural immersion',
+          thumbnail: 'https://img.youtube.com/vi/Oy4sr1zuKCw/maxresdefault.jpg'
+        },
+        {
+          url: 'https://youtu.be/Hc2qVy5iUts',
+          title: 'Thailand: Mok Fa Waterfall',
+          description: 'Natural beauty and waterfall exploration',
+          thumbnail: 'https://img.youtube.com/vi/Hc2qVy5iUts/maxresdefault.jpg'
+        },
+        {
+          url: 'https://youtu.be/mZxkkjcjU54',
+          title: 'South Africa: Haartebeespoort (Part 1)',
+          description: 'South African landscapes and culture exploration',
+          thumbnail: 'https://img.youtube.com/vi/mZxkkjcjU54/maxresdefault.jpg'
+        },
+        {
+          url: 'https://youtu.be/Hu-iJUzUzIw',
+          title: 'South Africa: Haartebeespoort (Part 2)',
+          description: 'Continued journey through South African beauty',
+          thumbnail: 'https://img.youtube.com/vi/Hu-iJUzUzIw/maxresdefault.jpg'
+        }
+      ],
+      featured: {
+        url: 'https://youtu.be/3vqPtvDG-bU',
+        title: 'Shame - Featured Film',
+        description: 'An intimate and powerful exploration of human vulnerability'
+      }
+    };
+
+    // Functions to load videos for each category
+    function loadAnimationVideos() {
+      window.videoPlayer.createVideoGrid('animations-grid', videoData.animations);
+    }
+
+    function loadShortFilmVideos() {
+      window.videoPlayer.createVideoGrid('shortfilms-grid', videoData.shortFilms);
+    }
+
+    function loadBigPictureVideos() {
+      window.videoPlayer.createVideoGrid('bigpicture-grid', videoData.bigPicture);
+    }
+
+    function loadFeaturedVideo() {
+      window.videoPlayer.embedVideo('featured-video-player', videoData.featured.url);
+    }
+
+    // Auto-load videos on page load
+    document.addEventListener('DOMContentLoaded', () => {
+      // Auto-load videos to showcase your work immediately
+      loadAnimationVideos();
+      loadShortFilmVideos();
+      loadBigPictureVideos();
+    });
+  </script>
 </body>
 </html>

@@ -1,0 +1,80 @@
+# VIDEO URL TEMPLATE - fluxlove Portfolio
+
+Please copy and paste your video URLs from the Word documents into this template, then I'll integrate them into your website.
+
+## 🎬 ANIMATIONS SECTION
+**From: "Animations - Fluxlove.docx"**
+
+Video 1:
+URL: https://www.youtube.com/watch?v=V9FW4nOweGM&ab_channel=Fluxlove
+Title: Spagheti dance
+Description: [PASTE DESCRIPTION HERE]
+
+
+
+## 🎬 SHORT FILMS SECTION
+**From: "Short Films - Fluxlove.docx"**
+
+Video 1:
+URL: https://youtu.be/1ufRKmfpHrQ?si=bbDz1VlWGNEzXL3K
+Title: stuffing
+Description: [PASTE DESCRIPTION HERE]
+
+Video 2:
+URL: https://youtu.be/3vqPtvDG-bU?si=WkRKWrA7uiNJGawL
+Title: shame
+Description: [PASTE DESCRIPTION HERE]
+
+Video 3:
+URL: https://youtu.be/2oIAy_Cpy2U?si=mReuG9Y-jA0QlsCl
+Title: you're so nice
+Description: [PASTE DESCRIPTION HERE]
+
+Video 4:
+URL: https://youtu.be/tMzbOvr8FU8?si=CsDWw3Qwtby_SaSj
+Title: Powerless
+Description: [PASTE DESCRIPTION HERE]
+
+Video 5:
+URL: https://youtu.be/hRbZKgEQcMs?si=WEjc384a5e0Xy-tt
+Title: GAIA
+Description: [PASTE DESCRIPTION HERE]
+
+## 🎬 THE BIGGER PICTURE SECTION
+**From: "The Bigger Picture - Fluxlove.docx"**
+
+Video 1:
+URL: [PASTE URL HERE]
+Title: [PASTE TITLE HERE]
+Description: [PASTE DESCRIPTION HERE]
+
+Video 2:
+URL: [PASTE URL HERE]
+Title: [PASTE TITLE HERE]
+Description: [PASTE DESCRIPTION HERE]
+
+## 💼 PROFESSIONAL PORTFOLIO VIDEO
+**From: "Professional Portfolio.docx"**
+
+Professional Video:
+URL: [PASTE URL HERE]
+Title: [PASTE TITLE HERE]
+Description: [PASTE DESCRIPTION HERE]
+
+---
+
+## 📋 HOW TO EXTRACT URLs FROM WORD DOCUMENTS:
+
+1. **Open each Word document**
+2. **Right-click on any hyperlinked text** (usually blue/underlined text)
+3. **Select "Copy Hyperlink" or "Copy Link Address"**
+4. **Paste the URL into this template above**
+5. **Also copy the title and description text from around the link**
+
+## 🔗 WHAT URLS LOOK LIKE:
+- YouTube: https://www.youtube.com/watch?v=ABC123
+- YouTube (short): https://youtu.be/ABC123
+- Vimeo: https://vimeo.com/123456789
+- Dailymotion: https://www.dailymotion.com/video/abc123
+
+Once you fill this out, I can immediately integrate all your videos into the portfolio!

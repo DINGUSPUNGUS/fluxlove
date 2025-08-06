@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="../css/main.css">
   <link rel="stylesheet" href="../css/animations.css">
   <link rel="stylesheet" href="../css/themes.css">
+  <link rel="stylesheet" href="../css/video-player.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -23,6 +24,7 @@
         <li><a href="../index.html" class="nav-link">Home</a></li>
         <li><a href="art-new.html" class="nav-link">Art</a></li>
         <li><a href="videos-new.html" class="nav-link">Films</a></li>
+        <li><a href="music-new.html" class="nav-link">Music</a></li>
         <li><a href="poetry-new.html" class="nav-link">Writing</a></li>
         <li><a href="strategic-communicator.html" class="nav-link active">Professional</a></li>
         <li><a href="visual-storyteller.html" class="nav-link">Storytelling</a></li>
@@ -47,6 +49,32 @@
       <section class="professional-overview">
         <div class="overview-grid">
           <div class="overview-card">
+            <h3>Professional Portfolio</h3>
+            <p>Comprehensive documentation of professional experience, skills, and achievements in strategic communication.</p>
+            <div class="portfolio-download">
+              <a href="../assets/Professional/Professional/Professional Portfolio.docx" class="btn btn-primary" download>
+                Download Full Portfolio
+              </a>
+              <p class="download-note">Complete professional portfolio including case studies, testimonials, and detailed project outcomes</p>
+            </div>
+            
+            <!-- Professional Video Showcase -->
+            <div class="professional-video-section">
+              <h4>Professional Showcase Video</h4>
+              <div class="video-player-container">
+                <div class="video-embed" id="professional-video-player">
+                  <div class="video-placeholder">
+                    <div class="play-button video"></div>
+                    <h4>Professional Portfolio Presentation</h4>
+                    <p>Watch a comprehensive overview of professional accomplishments and strategic communication expertise</p>
+                    <button class="btn btn-secondary" onclick="loadProfessionalVideo()">Play Professional Video</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="overview-card">
             <h3>Core Competencies</h3>
             <ul class="competencies-list">
               <li>Strategic Campaign Development</li>
@@ -55,21 +83,9 @@
               <li>Stakeholder Engagement</li>
               <li>Crisis Communication</li>
               <li>Digital Marketing Strategy</li>
+              <li>Content Strategy & Creation</li>
+              <li>Media Relations</li>
             </ul>
-          </div>
-          
-          <div class="overview-card">
-            <h3>Professional Experience</h3>
-            <div class="experience-item">
-              <h4>Communication Specialist</h4>
-              <p class="company">Creative Agency Inc. • 2023-Present</p>
-              <p>Led comprehensive communication strategies for 15+ clients, resulting in 40% increase in engagement rates</p>
-            </div>
-            <div class="experience-item">
-              <h4>Marketing Coordinator</h4>
-              <p class="company">Non-Profit Organization • 2022-2023</p>
-              <p>Developed awareness campaigns that increased community participation by 60%</p>
-            </div>
           </div>
         </div>
       </section>
@@ -196,5 +212,19 @@
   </footer>
 
   <script src="../js/main.js"></script>
+  <script src="../js/video-player.js"></script>
+  <script>
+    // Professional video data - REPLACE WITH YOUR ACTUAL VIDEO URL
+    const professionalVideoData = {
+      url: 'https://www.youtube.com/watch?v=PROFESSIONAL_EXAMPLE',  // Replace with your professional video URL
+      title: 'Professional Portfolio Presentation',
+      description: 'Comprehensive overview of strategic communication expertise and accomplishments'
+    };
+
+    // Function to load professional video
+    function loadProfessionalVideo() {
+      window.videoPlayer.embedVideo('professional-video-player', professionalVideoData.url);
+    }
+  </script>
 </body>
 </html>

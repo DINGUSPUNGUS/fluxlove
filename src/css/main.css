@@ -2133,3 +2133,216 @@ html {
   border-bottom: 0.6rem solid transparent;
   margin-left: 0.2rem;
 }
+
+/* ===== PROFESSIONAL LAYOUT IMPROVEMENTS ===== */
+
+/* Improved Grid Systems for Symmetry */
+.writing-collections .collection-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.overview-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+/* Professional Card Consistency */
+.collection-card, .category-card, .overview-card {
+    background: var(--surface-color);
+    border-radius: 16px;
+    padding: 2rem;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+    min-height: 420px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+
+.collection-card:hover, .category-card:hover, .overview-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    border-color: var(--primary-color);
+}
+
+/* Equal Height Cards */
+.collection-card h3, .category-card h3, .overview-card h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+    min-height: 2rem;
+}
+
+.collection-card p, .category-card p, .overview-card p {
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+    line-height: 1.6;
+}
+
+/* Professional Button Grid */
+.paper-links, .video-list .video-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: auto;
+    padding-top: 1rem;
+}
+
+.paper-links .btn, .video-list .btn {
+    flex: 1 1 auto;
+    min-width: 140px;
+    text-align: center;
+    font-size: 0.9rem;
+    padding: 0.6rem 1rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Video Grid Improvements */
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.video-player-container {
+    margin: 1.5rem 0;
+    border-radius: 16px;
+    overflow: hidden;
+    background: var(--surface-color);
+    border: 1px solid var(--border-color);
+}
+
+/* Responsive Design Improvements */
+@media (max-width: 768px) {
+    .writing-collections .collection-grid,
+    .category-grid,
+    .overview-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .collection-card, .category-card, .overview-card {
+        min-height: auto;
+        padding: 1.5rem;
+    }
+    
+    .paper-links {
+        flex-direction: column;
+    }
+    
+    .paper-links .btn {
+        flex: 1 1 100%;
+        min-width: unset;
+    }
+}
+
+.paper-list {
+    margin-top: 1.5rem;
+}
+
+.paper-item {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.paper-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    border-color: var(--primary);
+}
+
+.paper-item h4 {
+    color: var(--primary);
+    font-size: var(--font-lg);
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.paper-item p {
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.paper-links {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.paper-links .btn {
+    font-size: var(--font-sm);
+    padding: 0.5rem 1rem;
+}
+
+.coming-soon {
+    color: var(--text-muted);
+    font-style: italic;
+    font-size: var(--font-sm);
+    background: var(--background);
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    border: 1px dashed var(--border);
+}
+
+/* Mobile responsive for academic writing */
+@media (max-width: 768px) {
+    .writing-collections .collection-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .paper-links {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .paper-links .btn {
+        text-align: center;
+    }
+}
+
+/* ===== PROFESSIONAL PORTFOLIO STYLES ===== */
+.portfolio-download {
+    margin-top: 1.5rem;
+    padding: 1.5rem;
+    background: var(--background);
+    border-radius: 12px;
+    border: 2px solid var(--border);
+    text-align: center;
+}
+
+.portfolio-download .btn {
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.download-note {
+    font-size: var(--font-sm);
+    color: var(--text-muted);
+    margin: 0;
+    line-height: 1.5;
+}
