@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Art Gallery - fluxlove</title>
+  <link rel="stylesheet" href="../css/professional-typography.css">
   <link rel="stylesheet" href="../css/main.css">
   <link rel="stylesheet" href="../css/animations.css">
   <link rel="stylesheet" href="../css/themes.css">
@@ -24,7 +25,7 @@
       <ul class="nav-menu">
         <li><a href="../../index.html" class="nav-link">Home</a></li>
         <li><a href="art-new.html" class="nav-link active">Art</a></li>
-        <li><a href="videos-new.html" class="nav-link">Films</a></li>
+        <li><a href="films-new.html" class="nav-link">Films</a></li>
         <li><a href="music-new.html" class="nav-link">Music</a></li>
         <li><a href="poetry-new.html" class="nav-link">Writing</a></li>
         <li><a href="strategic-communicator.html" class="nav-link">Professional</a></li>
@@ -43,78 +44,312 @@
   <!-- Main Content -->
   <main class="page-content">
     <div class="container">
-      <header class="page-header">
-        <h1 class="page-title">Art Gallery</h1>
-        <p class="page-subtitle">Visual expressions through various mediums and styles</p>
+      <!-- Immersive Art Hero -->
+      <header class="art-hero">
+        <div class="hero-content">
+          <h1 class="art-title">Visual Stories Unfold</h1>
+          <p class="art-subtitle">Where creativity meets emotion, every piece tells a story waiting to be discovered</p>
+          <div class="art-stats">
+            <div class="stat-item">
+              <span class="stat-number">127</span>
+              <span class="stat-label">Artworks Created</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">8</span>
+              <span class="stat-label">Different Mediums</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">3</span>
+              <span class="stat-label">Years of Evolution</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="rotating-canvas">
+            <div class="canvas-layer" data-layer="1">◯</div>
+            <div class="canvas-layer" data-layer="2">🖌️</div>
+            <div class="canvas-layer" data-layer="3">◆</div>
+          </div>
+        </div>
       </header>
 
-      <!-- Art Categories -->
-      <section class="art-categories">
-        <div class="category-grid">
-          <div class="category-card">
-            <h3>Digital Art</h3>
-            <p>Modern digital illustrations and graphic design work</p>
-            <div class="placeholder-gallery">
-              <div class="placeholder-item digital">Digital Piece 1</div>
-              <div class="placeholder-item digital">Digital Piece 2</div>
-              <div class="placeholder-item digital">Digital Piece 3</div>
+      <!-- Interactive Art Journey -->
+      <section class="art-journey">
+        <h2 class="section-title">My Artistic Evolution</h2>
+        <div class="journey-timeline">
+          <div class="journey-path"></div>
+          
+          <div class="journey-milestone" data-year="2022">
+            <div class="milestone-marker"></div>
+            <div class="milestone-content">
+              <h3>Digital Discovery</h3>
+              <p>My first dive into digital art opened up endless possibilities. Learning to paint with pixels was like discovering a new language.</p>
+              <div class="milestone-gallery">
+                <div class="mini-artwork digital">First Digital Piece</div>
+                <div class="mini-artwork digital">Color Experiments</div>
+                <div class="mini-artwork digital">Style Finding</div>
+              </div>
             </div>
           </div>
 
-          <div class="category-card">
-            <h3>Traditional Art</h3>
-            <p>Hand-drawn illustrations, paintings, and sketches</p>
-            <div class="placeholder-gallery">
-              <div class="placeholder-item traditional">Painting 1</div>
-              <div class="placeholder-item traditional">Sketch 1</div>
-              <div class="placeholder-item traditional">Portrait 1</div>
+          <div class="journey-milestone" data-year="2023">
+            <div class="milestone-marker"></div>
+            <div class="milestone-content">
+              <h3>Traditional Roots</h3>
+              <p>Returning to traditional mediums taught me that sometimes the best technology is a pencil and paper. Each stroke carries intention.</p>
+              <div class="milestone-gallery">
+                <div class="mini-artwork traditional">Portrait Studies</div>
+                <div class="mini-artwork traditional">Landscape Sketches</div>
+                <div class="mini-artwork traditional">Abstract Paintings</div>
+              </div>
             </div>
           </div>
 
-          <div class="category-card">
-            <h3>Mixed Media</h3>
-            <p>Experimental works combining different artistic techniques</p>
-            <div class="placeholder-gallery">
-              <div class="placeholder-item mixed">Mixed 1</div>
-              <div class="placeholder-item mixed">Mixed 2</div>
-              <div class="placeholder-item mixed">Mixed 3</div>
+          <div class="journey-milestone" data-year="2024">
+            <div class="milestone-marker active"></div>
+            <div class="milestone-content">
+              <h3>Mixed Media Magic</h3>
+              <p>Combining digital and traditional techniques created my signature style—where technology enhances rather than replaces human touch.</p>
+              <div class="milestone-gallery">
+                <div class="mini-artwork mixed">Hybrid Compositions</div>
+                <div class="mini-artwork mixed">Textural Experiments</div>
+                <div class="mini-artwork mixed">Storytelling Series</div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Featured Works -->
-      <section class="featured-works">
-        <h2 class="section-title">Featured Artwork</h2>
-        <div class="featured-grid">
-          <div class="featured-item">
-            <div class="artwork-placeholder art"></div>
-            <h3>Abstract Expression</h3>
-            <p>A vibrant exploration of color and emotion through abstract forms</p>
-            <span class="artwork-medium">Digital Art • 2024</span>
-          </div>
-          <div class="featured-item">
-            <div class="artwork-placeholder art"></div>
-            <h3>Portrait Series</h3>
-            <p>Character studies capturing diverse personalities and emotions</p>
-            <span class="artwork-medium">Traditional • 2024</span>
-          </div>
-          <div class="featured-item">
-            <div class="artwork-placeholder art"></div>
-            <h3>Color Symphony</h3>
-            <p>An experimental piece exploring the relationship between music and color through visual composition</p>
-            <span class="artwork-medium">Mixed Media • 2023</span>
-          </div>
-          <div class="featured-item">
-            <div class="artwork-placeholder art"></div>
-            <h3>Musical Compositions</h3>
-            <p>Original musical works that complement visual artistry and explore auditory creativity</p>
-            <div class="portfolio-download">
-              <a href="../assets/Music/Music/Music - Fluxlove.docx" class="btn btn-secondary" download>
-                View Music Portfolio
-              </a>
+      <!-- Interactive Art Gallery -->
+      <section class="immersive-gallery">
+        <h2 class="section-title">Featured Collection</h2>
+        <div class="gallery-controls">
+          <button class="filter-btn active" data-filter="all">All Works</button>
+          <button class="filter-btn" data-filter="digital">Digital Art</button>
+          <button class="filter-btn" data-filter="traditional">Traditional</button>
+          <button class="filter-btn" data-filter="mixed">Mixed Media</button>
+          <button class="filter-btn" data-filter="experimental">Experimental</button>
+        </div>
+
+        <div class="gallery-grid">
+          <div class="artwork-card" data-category="digital" data-story="passion">
+            <div class="artwork-frame">
+              <div class="artwork-placeholder digital-art">
+                <span class="artwork-emoji">🌌</span>
+              </div>
+              <div class="artwork-overlay">
+                <h3>Cosmic Dreams</h3>
+                <p>A digital exploration of space and time through vibrant gradients and ethereal forms</p>
+                <div class="artwork-details">
+                  <span class="medium">Digital Art</span>
+                  <span class="year">2024</span>
+                  <span class="tools">Photoshop, Procreate</span>
+                </div>
+              </div>
             </div>
-            <span class="artwork-medium">Audio Compositions • 2023-2024</span>
+            <div class="artwork-story">
+              <h4>The Story Behind the Art</h4>
+              <p>Created during a period of intense curiosity about our place in the universe. Each swirl represents a different possibility, a different path through the cosmos of creativity.</p>
+            </div>
+          </div>
+
+          <div class="artwork-card" data-category="traditional" data-story="emotion">
+            <div class="artwork-frame">
+              <div class="artwork-placeholder traditional-art">
+                <span class="artwork-emoji">👤</span>
+              </div>
+              <div class="artwork-overlay">
+                <h3>Silent Conversations</h3>
+                <p>Portrait series capturing unspoken emotions and hidden thoughts</p>
+                <div class="artwork-details">
+                  <span class="medium">Charcoal & Graphite</span>
+                  <span class="year">2023</span>
+                  <span class="tools">Traditional Media</span>
+                </div>
+              </div>
+            </div>
+            <div class="artwork-story">
+              <h4>The Story Behind the Art</h4>
+              <p>Every face tells a story. This series emerged from countless hours studying human expressions, trying to capture the moments between words when truth lives in silence.</p>
+            </div>
+          </div>
+
+          <div class="artwork-card" data-category="mixed" data-story="innovation">
+            <div class="artwork-frame">
+              <div class="artwork-placeholder mixed-art">
+                <span class="artwork-emoji">◦</span>
+              </div>
+              <div class="artwork-overlay">
+                <h3>Emotional Landscapes</h3>
+                <p>Mixed media exploration of how feelings can be mapped like territories</p>
+                <div class="artwork-details">
+                  <span class="medium">Mixed Media</span>
+                  <span class="year">2024</span>
+                  <span class="tools">Digital + Traditional</span>
+                </div>
+              </div>
+            </div>
+            <div class="artwork-story">
+              <h4>The Story Behind the Art</h4>
+              <p>What if emotions had geography? This piece maps the terrain of human feeling—the peaks of joy, valleys of sorrow, and endless horizons of possibility.</p>
+            </div>
+          </div>
+
+          <div class="artwork-card" data-category="experimental" data-story="breakthrough">
+            <div class="artwork-frame">
+              <div class="artwork-placeholder experimental-art">
+                <span class="artwork-emoji">◉</span>
+              </div>
+              <div class="artwork-overlay">
+                <h3>Data Dreams</h3>
+                <p>Visualizing personal data as abstract art forms</p>
+                <div class="artwork-details">
+                  <span class="medium">Data Visualization</span>
+                  <span class="year">2024</span>
+                  <span class="tools">Code + Design</span>
+                </div>
+              </div>
+            </div>
+            <div class="artwork-story">
+              <h4>The Story Behind the Art</h4>
+              <p>Turning spreadsheets into poetry. This experimental series transforms mundane personal data—sleep patterns, creative sessions, mood tracking—into beautiful, meaningful visualizations.</p>
+            </div>
+          </div>
+
+          <div class="artwork-card" data-category="digital" data-story="growth">
+            <div class="artwork-frame">
+              <div class="artwork-placeholder digital-art">
+                <span class="artwork-emoji">🌱</span>
+              </div>
+              <div class="artwork-overlay">
+                <h3>Growth Patterns</h3>
+                <p>Organic forms meet digital precision in this nature-inspired series</p>
+                <div class="artwork-details">
+                  <span class="medium">Digital Illustration</span>
+                  <span class="year">2024</span>
+                  <span class="tools">Illustrator, Hand-drawn</span>
+                </div>
+              </div>
+            </div>
+            <div class="artwork-story">
+              <h4>The Story Behind the Art</h4>
+              <p>Inspired by watching plants grow in time-lapse, this piece explores how organic growth patterns can inspire digital design. Each curve follows nature's mathematical beauty.</p>
+            </div>
+          </div>
+
+          <div class="artwork-card" data-category="traditional" data-story="memory">
+            <div class="artwork-frame">
+              <div class="artwork-placeholder traditional-art">
+                <span class="artwork-emoji">🏠</span>
+              </div>
+              <div class="artwork-overlay">
+                <h3>Memory Palace</h3>
+                <p>Watercolor series exploring childhood memories and lost places</p>
+                <div class="artwork-details">
+                  <span class="medium">Watercolor</span>
+                  <span class="year">2023</span>
+                  <span class="tools">Traditional Paint</span>
+                </div>
+              </div>
+            </div>
+            <div class="artwork-story">
+              <h4>The Story Behind the Art</h4>
+              <p>Memory is fluid like watercolor—bleeding at the edges, colors mixing unexpectedly. This series captures places that exist more in feeling than in fact.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Creative Process Insights -->
+      <section class="creative-process">
+        <h2 class="section-title">Inside My Creative Mind</h2>
+        <div class="process-grid">
+          <div class="process-card inspiration">
+            <div class="process-icon">◎</div>
+            <h3>Inspiration Strikes</h3>
+            <p>Ideas come from everywhere—overheard conversations, the way light hits a coffee cup, a piece of music that gives me chills. I keep a visual diary of these moments.</p>
+            <div class="process-details">
+              <ul>
+                <li>Daily observation sketches</li>
+                <li>Mood boards for every project</li>
+                <li>Cross-medium inspiration hunting</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="process-card experimentation">
+            <div class="process-icon">🧪</div>
+            <h3>Fearless Experimentation</h3>
+            <p>The best discoveries happen when you're willing to fail. I dedicate time each week to pure experimentation—no goals, just play.</p>
+            <div class="process-details">
+              <ul>
+                <li>Weekly experimental sessions</li>
+                <li>Combining unexpected mediums</li>
+                <li>Learning from "beautiful failures"</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="process-card refinement">
+            <div class="process-icon">◈</div>
+            <h3>Thoughtful Refinement</h3>
+            <p>Raw creativity meets strategic thinking. Each piece goes through multiple iterations until it achieves both emotional impact and visual harmony.</p>
+            <div class="process-details">
+              <ul>
+                <li>Iterative design process</li>
+                <li>Feedback from trusted critics</li>
+                <li>Technical skill development</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="process-card sharing">
+            <div class="process-icon">○</div>
+            <h3>Meaningful Sharing</h3>
+            <p>Art isn't complete until it connects with others. I believe in sharing work that sparks conversations and creates emotional bridges between people.</p>
+            <div class="process-details">
+              <ul>
+                <li>Storytelling with each piece</li>
+                <li>Community feedback loops</li>
+                <li>Educational content creation</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Artist's Philosophy -->
+      <section class="artist-philosophy">
+        <div class="philosophy-content">
+          <h2>Art as Communication</h2>
+          <blockquote>
+            "Every brushstroke, every pixel, every creative choice is a word in a language that transcends verbal communication. Art doesn't just decorate space—it creates space for new conversations, new perspectives, and new possibilities."
+          </blockquote>
+          <div class="philosophy-principles">
+            <div class="principle">
+              <h4>Intentional Creation</h4>
+              <p>Every piece serves a purpose, tells a story, or solves a visual problem.</p>
+            </div>
+            <div class="principle">
+              <h4>Emotional Resonance</h4>
+              <p>Technical skill means nothing without the ability to move people emotionally.</p>
+            </div>
+            <div class="principle">
+              <h4>🔄 Continuous Evolution</h4>
+              <p>Style is not a destination but a journey of constant discovery and growth.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Call to Action -->
+      <section class="art-cta">
+        <div class="cta-content">
+          <h2>Let's Create Something Beautiful Together</h2>
+          <p>Whether you need custom artwork, creative direction, or want to collaborate on a visual storytelling project, I'm always excited to bring new ideas to life.</p>
+          <div class="cta-buttons">
+            <a href="mailto:hello@fluxlove.com" class="btn btn-primary">Commission Custom Art</a>
+            <a href="strategic-communicator.html" class="btn btn-secondary">Creative Services</a>
           </div>
         </div>
       </section>
@@ -128,6 +363,7 @@
     </div>
   </footer>
 
-  <script src="../js/main.js"></script>
+  <script src="../js/main-new.js"></script>
+  <script src="../js/art-gallery.js"></script>
 </body>
 </html>

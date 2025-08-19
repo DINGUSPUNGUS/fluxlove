@@ -1,26 +1,31 @@
-// Advanced Theme Management System for fluxlove Portfolio
+// ✨ FLUXLOVE - Enhanced Interactive System ✨
 const themes = [
     { 
         name: "professional", 
         display: "Professional", 
-        icon: "💼", 
-        description: "Clean, polished, and sophisticated" 
+        icon: "", 
+        description: "Clean, polished, and sophisticated",
+        particles: ["", "", "", "", ""]
     },
     { 
         name: "creative", 
         display: "Creative Art", 
-        icon: "🎨", 
-        description: "Vibrant, artistic, and inspiring" 
+        icon: "", 
+        description: "Vibrant, artistic, and inspiring",
+        particles: ["", "", "", "", ""]
     },
     { 
         name: "party", 
         display: "Dance Party", 
-        icon: "🎉", 
-        description: "Energetic, fun, and dynamic" 
+        icon: "", 
+        description: "Energetic, fun, and dynamic",
+        particles: ["", "", "", "", ""]
     }
 ];
 
 let currentThemeIndex = 0;
+let particleContainer = null;
+let cursorTrail = null;
 
 function setTheme(index) {
     const theme = themes[index];
@@ -28,11 +33,74 @@ function setTheme(index) {
     localStorage.setItem("portfolio-theme", index);
     updateThemeUI(index);
     
-    // Trigger theme change animation
+    // Trigger theme change animation with enhanced visual feedback
     document.body.style.setProperty('--theme-transition-active', '1');
+    createThemeTransition();
+    updateParticleSystem(theme);
+    
     setTimeout(() => {
         document.body.style.removeProperty('--theme-transition-active');
-    }, 600);
+    }, 800);
+}
+
+// 🌊 Create premium liquid theme transition effect
+function createThemeTransition() {
+    const existingTransition = document.querySelector('.page-transition');
+    if (existingTransition) {
+        existingTransition.remove();
+    }
+    
+    const transition = document.createElement('div');
+    transition.className = 'page-transition';
+    document.body.appendChild(transition);
+    
+    // Trigger premium animation sequence
+    requestAnimationFrame(() => {
+        transition.classList.add('active');
+    });
+    
+    // Add subtle screen blur during transition
+    document.body.style.filter = 'blur(1px)';
+    
+    // Remove transition and restore clarity
+    setTimeout(() => {
+        document.body.style.filter = '';
+        transition.classList.remove('active');
+        
+        setTimeout(() => {
+            transition.remove();
+        }, 300);
+    }, 1000);
+}
+
+// ✨ Dynamic particle system based on current theme
+function updateParticleSystem(theme) {
+    if (!particleContainer) {
+        particleContainer = document.createElement('div');
+        particleContainer.className = 'particle-container';
+        document.body.appendChild(particleContainer);
+    }
+    
+    // Clear existing particles
+    particleContainer.innerHTML = '';
+    
+    // Create theme-appropriate particles
+    const particleCount = 15;
+    for (let i = 0; i < particleCount; i++) {
+        createParticle(theme, i);
+    }
+}
+
+function createParticle(theme, index) {
+    const particle = document.createElement('div');
+    particle.className = 'particle';
+    
+    // Random positioning
+    particle.style.left = Math.random() * 100 + '%';
+    particle.style.animationDelay = (Math.random() * 20) + 's';
+    particle.style.animationDuration = (12 + Math.random() * 8) + 's';
+    
+    particleContainer.appendChild(particle);
 }
 
 function updateThemeUI(index) {
@@ -61,7 +129,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const savedTheme = localStorage.getItem("portfolio-theme");
     if (savedTheme !== null) {
         currentThemeIndex = parseInt(savedTheme, 10);
-        // Ensure the index is valid
         if (currentThemeIndex >= themes.length) {
             currentThemeIndex = 0;
         }
@@ -74,10 +141,18 @@ document.addEventListener("DOMContentLoaded", () => {
         toggleBtn.addEventListener("click", () => {
             currentThemeIndex = (currentThemeIndex + 1) % themes.length;
             setTheme(currentThemeIndex);
+            createSparkles(toggleBtn);
         });
     }
 
-    // Smooth scrolling for anchor links
+    // Initialize all enhanced features
+    initializeAnimations();
+    initializeThemeFeatures();
+    initializeFloatingElements();
+    initializeCursorTrail();
+    initializeSkillCards();
+    
+    // Add smooth scrolling for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
@@ -90,13 +165,148 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
     });
-
-    // Initialize animations
-    initializeAnimations();
-    
-    // Initialize theme-specific features
-    initializeThemeFeatures();
 });
+
+// 🎨 Create premium floating geometric elements
+function initializeFloatingElements() {
+    const floatingContainer = document.createElement('div');
+    floatingContainer.className = 'floating-elements';
+    document.body.appendChild(floatingContainer);
+    
+    // Create 8 sophisticated geometric shapes
+    for (let i = 0; i < 8; i++) {
+        const floatingEl = document.createElement('div');
+        floatingEl.className = 'floating-element';
+        floatingEl.style.animationDelay = (i * 4) + 's';
+        
+        // Add some randomness to the animation duration for organic feel
+        const duration = 20 + (Math.random() * 10);
+        floatingEl.style.animationDuration = duration + 's';
+        
+        floatingContainer.appendChild(floatingEl);
+    }
+}
+
+// 🎯 Cursor trail effect
+function initializeCursorTrail() {
+    cursorTrail = document.createElement('div');
+    cursorTrail.className = 'cursor-trail';
+    document.body.appendChild(cursorTrail);
+    
+    let mouseX = 0, mouseY = 0;
+    let trailX = 0, trailY = 0;
+    
+    document.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+        cursorTrail.classList.add('active');
+    });
+    
+    document.addEventListener('mouseleave', () => {
+        cursorTrail.classList.remove('active');
+    });
+    
+    // Smooth trailing animation
+    function updateTrail() {
+        const dx = mouseX - trailX;
+        const dy = mouseY - trailY;
+        
+        trailX += dx * 0.1;
+        trailY += dy * 0.1;
+        
+        cursorTrail.style.left = trailX + 'px';
+        cursorTrail.style.top = trailY + 'px';
+        
+        requestAnimationFrame(updateTrail);
+    }
+    updateTrail();
+}
+
+// 🃏 Enhanced skill card interactions
+function initializeSkillCards() {
+    const skillCards = document.querySelectorAll('.skill-card');
+    
+    skillCards.forEach(card => {
+        // Create card structure for 3D flip
+        const content = card.innerHTML;
+        card.innerHTML = `
+            <div class="skill-card-inner">
+                <div class="skill-card-front">
+                    ${content}
+                </div>
+                <div class="skill-card-back">
+                    <h3>Discover More</h3>
+                    <p>Click to explore this amazing skill area!</p>
+                    <div class="skill-preview">Professional excellence showcased here</div>
+                </div>
+            </div>
+        `;
+        
+        // Add click handler for navigation
+        const skillLink = card.querySelector('.skill-link');
+        if (skillLink) {
+            card.addEventListener('click', (e) => {
+                if (e.target !== skillLink) {
+                    skillLink.click();
+                }
+            });
+        }
+    });
+}
+
+// ✨ Create sparkle effect for interactions
+function createSparkles(element) {
+    const rect = element.getBoundingClientRect();
+    const sparkleCount = 8;
+    
+    for (let i = 0; i < sparkleCount; i++) {
+        const sparkle = document.createElement('div');
+        sparkle.style.cssText = `
+            position: fixed;
+            width: 6px;
+            height: 6px;
+            background: linear-gradient(45deg, #ffd700, #ffed4e);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 9999;
+            left: ${rect.left + rect.width/2}px;
+            top: ${rect.top + rect.height/2}px;
+            animation: sparkleExplode 0.8s ease-out forwards;
+        `;
+        
+        const angle = (360 / sparkleCount) * i;
+        const distance = 50 + Math.random() * 30;
+        
+        sparkle.style.setProperty('--angle', angle + 'deg');
+        sparkle.style.setProperty('--distance', distance + 'px');
+        
+        document.body.appendChild(sparkle);
+        
+        setTimeout(() => sparkle.remove(), 800);
+    }
+    
+    // Add sparkle animation keyframes if not present
+    if (!document.querySelector('#sparkle-styles')) {
+        const style = document.createElement('style');
+        style.id = 'sparkle-styles';
+        style.textContent = `
+            @keyframes sparkleExplode {
+                0% {
+                    transform: scale(1) translate(0, 0);
+                    opacity: 1;
+                }
+                100% {
+                    transform: scale(0) translate(
+                        calc(cos(var(--angle)) * var(--distance)),
+                        calc(sin(var(--angle)) * var(--distance))
+                    );
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+    }
+}
 
 function initializeAnimations() {
     // Enhanced Intersection Observer for fade-in animations

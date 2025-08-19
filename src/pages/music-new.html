@@ -1,269 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Music - fluxlove</title>
-  <link rel="stylesheet" href="../css/main.css">
-  <link rel="stylesheet" href="../css/animations.css">
-  <link rel="stylesheet" href="../css/themes.css">
-  <link rel="stylesheet" href="../css/video-player.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music - fluxlove</title>
+    <link rel="stylesheet" href="../css/professional-typography.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link rel="stylesheet" href="../css/themes.css">
+    <link rel="stylesheet" href="../css/films.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="animated-bg"></div>
-  
-  <nav class="main-nav">
-    <div class="nav-container">
-      <div class="logo">
-        <h1><a href="../../index.html" class="logo-link">fluxlove</a></h1>
-      </div>
-      <ul class="nav-menu">
-        <li><a href="../../index.html" class="nav-link">Home</a></li>
-        <li><a href="art-new.html" class="nav-link">Art</a></li>
-        <li><a href="videos-new.html" class="nav-link">Films</a></li>
-        <li><a href="poetry-new.html" class="nav-link">Writing</a></li>
-        <li><a href="strategic-communicator.html" class="nav-link">Professional</a></li>
-        <li><a href="music-new.html" class="nav-link active">Music</a></li>
-        <li><a href="visual-storyteller.html" class="nav-link">Storytelling</a></li>
-        <li><a href="education.html" class="nav-link">Education</a></li>
-        <li><a href="awards.html" class="nav-link">Awards</a></li>
-        <li><a href="volunteering.html" class="nav-link">Volunteering</a></li>
-        <li><a href="about-new.html" class="nav-link">About</a></li>
-      </ul>
-      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
-        <span class="theme-icon"></span>
-      </button>
-    </div>
-  </nav>
-
-  <main class="page-content">
-    <div class="container">
-      <header class="page-header">
-        <h1 class="page-title">Music Portfolio</h1>
-        <p class="page-subtitle">Musical performances, collaborations, and original compositions</p>
-      </header>
-
-      <section class="music-showcase">
-        <div class="featured-performance">
-          <h2 class="section-title">Featured Performance</h2>
-          <div class="featured-video-container">
-            <div class="video-player-container">
-              <div class="video-embed" id="featured-music-player">
-                <div class="video-placeholder">
-                  <div class="play-button video"></div>
-                  <h3>Fluxlove x Willa Wildflower</h3>
-                  <p>Live collaborative performance showcasing musical artistry</p>
-                  <button class="btn btn-primary" onclick="loadFeaturedMusic()">Play Featured Performance</button>
-                </div>
-              </div>
+    <div class="animated-bg"></div>
+    
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <div class="logo">
+                <h1><a href="../../index.html" class="logo-link">fluxlove</a></h1>
             </div>
-            <div class="video-description">
-              <h4>About This Performance</h4>
-              <p>A collaborative musical journey exploring harmony, emotion, and artistic expression through live performance and creative interpretation of beloved songs.</p>
-              <div class="video-stats">
-                <span>Collaboration with Willa Wildflower</span>
-                <span>Live Performance</span>
-                <span>Original Arrangements</span>
-              </div>
-            </div>
-          </div>
+            <ul class="nav-menu">
+                <li><a href="../../index.html" class="nav-link">Home</a></li>
+                <li><a href="art-new.html" class="nav-link">Art</a></li>
+                <li><a href="films-new.html" class="nav-link">Films</a></li>
+                <li><a href="music-new.html" class="nav-link active">Music</a></li>
+                <li><a href="poetry-new.html" class="nav-link">Writing</a></li>
+                <li><a href="strategic-communicator.html" class="nav-link">Professional</a></li>
+                <li><a href="visual-storyteller.html" class="nav-link">Storytelling</a></li>
+                <li><a href="education.html" class="nav-link">Education</a></li>
+                <li><a href="awards.html" class="nav-link">Awards</a></li>
+                <li><a href="volunteering.html" class="nav-link">Volunteering</a></li>
+                <li><a href="about-new.html" class="nav-link">About</a></li>
+            </ul>
+            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+                <span class="theme-icon"></span>
+            </button>
         </div>
-      </section>
+    </nav>
 
-      <section class="music-categories">
-        <div class="category-grid">
-          <div class="category-card">
-            <div class="card-header">
-              <h3>Live Performances</h3>
-              <p>Acoustic performances and live covers showcasing vocal and instrumental talents</p>
-            </div>
-            
-            <div class="card-content">
-              <!-- Video Grid for Live Performances -->
-              <div id="live-performances-grid" class="uniform-grid">
-                <!-- Videos will be populated here by JavaScript -->
-              </div>
-              
-              <!-- Embedded Video Player -->
-              <div class="video-player-container">
-                <div class="video-embed" id="live-performance-player">
-                  <!-- Individual video will be embedded here -->
-                </div>
-              </div>
-              
-              <div class="video-actions">
-                <a href="../assets/Music/Music/Music - Fluxlove.docx" class="btn btn-secondary" download>Performance Details</a>
-                <button class="btn btn-primary" onclick="loadLivePerformances()">Load Performances</button>
-              </div>
-            </div>
-          </div>
-
-          <div class="category-card">
-            <div class="card-header">
-              <h3>Collaborations</h3>
-              <p>Musical collaborations featuring duets and ensemble performances</p>
-            </div>
-            
-            <div class="card-content">
-              <!-- Video Grid for Collaborations -->
-              <div id="collaborations-grid" class="uniform-grid">
-                <!-- Videos will be populated here by JavaScript -->
-              </div>
-              
-              <!-- Embedded Video Player -->
-              <div class="video-player-container">
-                <div class="video-embed" id="collaboration-player">
-                  <!-- Individual video will be embedded here -->
-                </div>
-              </div>
-              
-              <div class="video-actions">
-                <button class="btn btn-primary" onclick="loadCollaborations()">Load Collaborations</button>
-              </div>
-            </div>
-          </div>
-
-          <div class="category-card">
-            <div class="card-header">
-              <h3>Cover Songs</h3>
-              <p>Creative interpretations of beloved songs with unique artistic arrangements</p>
-            </div>
-            
-            <div class="card-content">
-              <!-- Video Grid for Cover Songs -->
-              <div id="covers-grid" class="uniform-grid">
-                <!-- Videos will be populated here by JavaScript -->
-              </div>
-              
-              <!-- Embedded Video Player -->
-              <div class="video-player-container">
-                <div class="video-embed" id="covers-player">
-                  <!-- Individual video will be embedded here -->
-                </div>
-              </div>
-              
-              <div class="video-actions">
-                <button class="btn btn-primary" onclick="loadCoverSongs()">Load Cover Songs</button>
-              </div>
-            </div>
-          </div>
+    <!-- Main Content -->
+    <main class="page-content">
+        <div class="films-hero">
+            <h1 class="hero-title">My Music</h1>
+            <p class="hero-subtitle">Live performances, collaborations, and heartfelt covers</p>
         </div>
-      </section>
 
-      <section class="music-portfolio-download">
-        <h2 class="section-title">Complete Music Portfolio</h2>
-        <div class="portfolio-card">
-          <div class="portfolio-info">
-            <h3>Music Portfolio Document</h3>
-            <p>Comprehensive documentation of musical journey, performances, and artistic development</p>
-            <a href="../assets/Music/Music/Music - Fluxlove.docx" class="btn btn-primary" download>
-              Download Music Portfolio
-            </a>
-          </div>
+        <!-- Music Categories -->
+        <div class="films-container">
+            
+            <!-- Featured Performance Section -->
+            <section class="film-category">
+                <h2 class="category-title">Featured Performance</h2>
+                <div class="films-grid">
+                    <div class="film-card" data-video-id="Ya3c4h-nO3Y">
+                        <div class="film-thumbnail">
+                            <img src="https://img.youtube.com/vi/Ya3c4h-nO3Y/maxresdefault.jpg" alt="Fluxlove x Willa Wildflower" loading="lazy">
+                            <div class="play-button">▶</div>
+                        </div>
+                        <div class="film-info">
+                            <h3>Fluxlove x Willa Wildflower</h3>
+                            <p>Collaborative musical performance</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Live Covers Section -->
+            <section class="film-category">
+                <h2 class="category-title">Live Covers</h2>
+                <div class="films-grid">
+                    <div class="film-card" data-video-id="hYjML864o0Y">
+                        <div class="film-thumbnail">
+                            <img src="https://img.youtube.com/vi/hYjML864o0Y/maxresdefault.jpg" alt="Jolene Live Cover" loading="lazy">
+                            <div class="play-button">▶</div>
+                        </div>
+                        <div class="film-info">
+                            <h3>Jolene</h3>
+                            <p>Live acoustic cover</p>
+                        </div>
+                    </div>
+
+                    <div class="film-card" data-video-id="97iwrupW120">
+                        <div class="film-thumbnail">
+                            <img src="https://img.youtube.com/vi/97iwrupW120/maxresdefault.jpg" alt="Black Bird Live Cover" loading="lazy">
+                            <div class="play-button">▶</div>
+                        </div>
+                        <div class="film-info">
+                            <h3>Black Bird</h3>
+                            <p>Live acoustic cover</p>
+                        </div>
+                    </div>
+
+                    <div class="film-card" data-video-id="a_Hgo_xdBSI">
+                        <div class="film-thumbnail">
+                            <img src="https://img.youtube.com/vi/a_Hgo_xdBSI/maxresdefault.jpg" alt="Hallelujah Live Cover" loading="lazy">
+                            <div class="play-button">▶</div>
+                        </div>
+                        <div class="film-info">
+                            <h3>Hallelujah</h3>
+                            <p>Live acoustic cover</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Collaborations Section -->
+            <section class="film-category">
+                <h2 class="category-title">Collaborations with Willa Wildflower</h2>
+                <div class="films-grid">
+                    <div class="film-card" data-video-id="vmIWNhb-rsU">
+                        <div class="film-thumbnail">
+                            <img src="https://img.youtube.com/vi/vmIWNhb-rsU/maxresdefault.jpg" alt="Polly Cover" loading="lazy">
+                            <div class="play-button">▶</div>
+                        </div>
+                        <div class="film-info">
+                            <h3>Polly</h3>
+                            <p>Collaborative cover performance</p>
+                        </div>
+                    </div>
+
+                    <div class="film-card" data-video-id="goyKhGQeggw">
+                        <div class="film-thumbnail">
+                            <img src="https://img.youtube.com/vi/goyKhGQeggw/maxresdefault.jpg" alt="Heart-Shaped Box Cover" loading="lazy">
+                            <div class="play-button">▶</div>
+                        </div>
+                        <div class="film-info">
+                            <h3>Heart-Shaped Box</h3>
+                            <p>Collaborative cover performance</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
-      </section>
+    </main>
+
+    <!-- Video Modal -->
+    <div id="videoModal" class="video-modal">
+        <div class="video-modal-content">
+            <button class="video-modal-close">&times;</button>
+            <div id="videoContainer"></div>
+        </div>
     </div>
-  </main>
 
-  <footer class="main-footer">
-    <div class="container">
-      <p>&copy; 2025 fluxlove. Designed with passion and precision.</p>
-    </div>
-  </footer>
-
-  <script src="../js/main.js"></script>
-  <script src="../js/video-player.js"></script>
-  <script>
-    // Music video data - YOUR ACTUAL VIDEO URLS
-    const musicVideoData = {
-      livePerformances: [
-        {
-          url: 'https://youtu.be/hYjML864o0Y',
-          title: "'Jolene' Live Cover",
-          description: 'Intimate acoustic performance of the classic Dolly Parton song',
-          thumbnail: 'https://img.youtube.com/vi/hYjML864o0Y/maxresdefault.jpg'
-        },
-        {
-          url: 'https://youtu.be/97iwrupW120',
-          title: "'Black Bird' Live Cover",
-          description: 'Soulful interpretation of the Beatles classic',
-          thumbnail: 'https://img.youtube.com/vi/97iwrupW120/maxresdefault.jpg'
-        },
-        {
-          url: 'https://youtu.be/a_Hgo_xdBSI',
-          title: "'Hallelujah' Live Cover",
-          description: 'Emotional performance of Leonard Cohen\'s masterpiece',
-          thumbnail: 'https://img.youtube.com/vi/a_Hgo_xdBSI/maxresdefault.jpg'
-        }
-      ],
-      collaborations: [
-        {
-          url: 'https://youtu.be/Ya3c4h-nO3Y',
-          title: 'Fluxlove x Willa Wildflower Rust Performance',
-          description: 'Collaborative performance showcasing musical chemistry and artistic synergy',
-          thumbnail: 'https://img.youtube.com/vi/Ya3c4h-nO3Y/maxresdefault.jpg'
-        },
-        {
-          url: 'https://youtu.be/vmIWNhb-rsU',
-          title: "'Polly' Cover - Fluxlove x Willa Wildflower",
-          description: 'Duet performance bringing new life to the Nirvana classic',
-          thumbnail: 'https://img.youtube.com/vi/vmIWNhb-rsU/maxresdefault.jpg'
-        },
-        {
-          url: 'https://youtu.be/goyKhGQeggw',
-          title: "'Heart-Shaped Box' Cover - Fluxlove x Willa Wildflower",
-          description: 'Collaborative interpretation of the grunge anthem with acoustic arrangements',
-          thumbnail: 'https://img.youtube.com/vi/goyKhGQeggw/maxresdefault.jpg'
-        }
-      ],
-      coverSongs: [
-        {
-          url: 'https://youtu.be/hYjML864o0Y',
-          title: "'Jolene' Acoustic Version",
-          description: 'Solo acoustic interpretation with personal artistic touches',
-          thumbnail: 'https://img.youtube.com/vi/hYjML864o0Y/maxresdefault.jpg'
-        },
-        {
-          url: 'https://youtu.be/a_Hgo_xdBSI',
-          title: "'Hallelujah' Solo Performance",
-          description: 'Intimate solo performance showcasing vocal range and emotional depth',
-          thumbnail: 'https://img.youtube.com/vi/a_Hgo_xdBSI/maxresdefault.jpg'
-        }
-      ],
-      featured: {
-        url: 'https://youtu.be/Ya3c4h-nO3Y',
-        title: 'Fluxlove x Willa Wildflower - Featured Performance',
-        description: 'Collaborative musical performance showcasing artistic partnership'
-      }
-    };
-
-    // Functions to load videos for each category
-    function loadLivePerformances() {
-      window.videoPlayer.createVideoGrid('live-performances-grid', musicVideoData.livePerformances);
-    }
-
-    function loadCollaborations() {
-      window.videoPlayer.createVideoGrid('collaborations-grid', musicVideoData.collaborations);
-    }
-
-    function loadCoverSongs() {
-      window.videoPlayer.createVideoGrid('covers-grid', musicVideoData.coverSongs);
-    }
-
-    function loadFeaturedMusic() {
-      window.videoPlayer.embedVideo('featured-music-player', musicVideoData.featured.url);
-    }
-
-    // Auto-load videos on page load
-    document.addEventListener('DOMContentLoaded', () => {
-      // Auto-load videos to showcase musical work immediately
-      loadLivePerformances();
-      loadCollaborations();
-      loadCoverSongs();
-    });
-  </script>
+    <script src="../js/main-new.js"></script>
+    <script src="../js/films-player.js"></script>
 </body>
 </html>
