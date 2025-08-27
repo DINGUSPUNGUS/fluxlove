@@ -6,7 +6,7 @@
   "scripts": {
     "start": "live-server . --port=3000 --open=/",
     "dev": "live-server src --port=3001 --open=/",
-    "build": "node build.js",
+    "build": "node build-prod.js",
     "build:prod": "node build-prod.js",
     "test": "echo 'Test step can be added here'",
     "analyze": "node analyze-bundle.js",
