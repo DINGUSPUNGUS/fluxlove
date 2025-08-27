@@ -1,15 +1,118 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" itemscope itemtype="https://schema.org/Person">
 <head>
+    <!-- Essential Meta Tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Creative Portfolio - Home</title>
-    <link rel="stylesheet" href="src/css/main.css">
-    <link rel="stylesheet" href="src/css/animations.css">
-    <link rel="stylesheet" href="src/css/themes.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <meta name="theme-color" content="#7c3aed">
+    <meta name="color-scheme" content="dark light">
+    
+    <!-- SEO Meta Tags -->
+    <title>fluxlove - Strategic Communicator • Visual Storyteller • Artist</title>
+    <meta name="description" content="Multidisciplinary creative professional combining strategic communication expertise with artistic vision. Explore my portfolio of visual arts, films, music, academic writing, and professional work.">
+    <meta name="keywords" content="creative portfolio, strategic communication, visual storytelling, digital art, film production, music performance, academic writing, multimedia artist, brand development, content strategy">
+    <meta name="author" content="fluxlove">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://fluxlove.com/">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="fluxlove - Strategic Communicator • Visual Storyteller • Artist">
+    <meta property="og:description" content="Multidisciplinary creative professional combining strategic communication expertise with artistic vision across digital, visual, and written mediums.">
+    <meta property="og:url" content="https://fluxlove.com/">
+    <meta property="og:site_name" content="fluxlove Portfolio">
+    <meta property="og:image" content="https://fluxlove.com/src/assets/images/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="fluxlove creative portfolio showcase">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="fluxlove - Strategic Communicator • Visual Storyteller • Artist">
+    <meta name="twitter:description" content="Multidisciplinary creative professional combining strategic communication expertise with artistic vision.">
+    <meta name="twitter:image" content="https://fluxlove.com/src/assets/images/twitter-card.jpg">
+    <meta name="twitter:image:alt" content="fluxlove creative portfolio showcase">
+    <meta name="twitter:creator" content="@fluxlove">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "fluxlove",
+      "url": "https://fluxlove.com",
+      "sameAs": [
+        "https://linkedin.com/in/fluxlove",
+        "https://instagram.com/fluxlove",
+        "https://twitter.com/fluxlove"
+      ],
+      "jobTitle": "Strategic Communicator, Visual Storyteller, Artist",
+      "description": "Multidisciplinary creative professional combining strategic communication expertise with artistic vision across digital, visual, and written mediums.",
+      "knowsAbout": [
+        "Strategic Communication",
+        "Visual Storytelling",
+        "Digital Art",
+        "Film Production",
+        "Content Strategy",
+        "Brand Development",
+        "Academic Writing",
+        "Multimedia Design"
+      ],
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://fluxlove.com/"
+      }
+    }
+    </script>
+    
+    <!-- Performance & SEO Links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    
+    <!-- Critical CSS (inline for performance) -->
+    <style>
+        /* Critical CSS for above-the-fold content */
+        *,*::before,*::after{box-sizing:border-box}*{margin:0;padding:0}html,body{height:100%}body{line-height:1.6;-webkit-font-smoothing:antialiased;font-family:'Inter','SF Pro Display',-apple-system,BlinkMacSystemFont,'Segoe UI','Roboto',sans-serif;color:#f8fafc;overflow-x:hidden;font-weight:400;letter-spacing:0.01em;background:#0a0a0f}:root{--primary:#7c3aed;--primary-light:#a855f7;--primary-dark:#5b21b6;--secondary:#f59e0b;--secondary-light:#fbbf24;--accent:#10b981;--accent-light:#34d399;--background:#0a0a0f;--surface:#1a1a2e;--surface-light:#252545;--text-color:#f8fafc;--text-light:#ffffff;--text-muted:#a1a1aa;--border:#374151;--transition-smooth:0.3s cubic-bezier(0.4,0,0.2,1)}.main-nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(10,10,15,0.95);backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,255,255,0.1)}.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;position:relative;background:radial-gradient(circle at 20% 20%,rgba(99,102,241,0.08) 0%,transparent 50%),radial-gradient(circle at 80% 80%,rgba(245,158,11,0.08) 0%,transparent 50%)}
+    </style>
+    
+    <!-- Stylesheets (non-critical) -->
+    <link rel="preload" href="src/css/performance.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="src/css/hero.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="src/css/portfolio.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="src/css/animations-optimized.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="src/css/themes.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="src/css/performance.css">
+        <link rel="stylesheet" href="src/css/hero.css">
+        <link rel="stylesheet" href="src/css/portfolio.css">
+        <link rel="stylesheet" href="src/css/animations-optimized.css">
+        <link rel="stylesheet" href="src/css/themes.css">
+    </noscript>
+    
+    <!-- Google Fonts (optimized loading) -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"></noscript>
+    
+    <!-- PWA Support -->
+    <link rel="manifest" href="/manifest.json">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="fluxlove">
+    
+    <!-- Favicon & Icons -->
+    <link rel="icon" type="image/svg+xml" href="/src/assets/images/favicon.svg">
+    <link rel="icon" type="image/png" href="/src/assets/images/favicon.png">
+    <link rel="apple-touch-icon" href="/src/assets/images/apple-touch-icon.png">
+    
+    <!-- Performance Hints -->
+    <link rel="preload" href="src/js/main-new.js" as="script">
+    <link rel="prefetch" href="src/pages/art-new.html">
+    <link rel="prefetch" href="src/pages/films-new.html">
+    <link rel="prefetch" href="src/pages/about-new.html">
 </head>
 <body>
     <!-- Animated background -->
@@ -156,7 +259,111 @@
         </div>
     </footer>
 
-    <script src="src/js/main-new.js"></script>
-    <script src="src/js/animations.js"></script>
+    <!-- Performance JavaScript -->
+    <script>
+        // Critical performance optimizations
+        (function() {
+            'use strict';
+            
+            // Service Worker Registration
+            if ('serviceWorker' in navigator) {
+                window.addEventListener('load', function() {
+                    navigator.serviceWorker.register('/src/sw.js')
+                        .then(function(registration) {
+                            console.log('✅ SW registered:', registration.scope);
+                            
+                            // Check for updates
+                            registration.addEventListener('updatefound', function() {
+                                console.log('🔄 SW update found');
+                            });
+                        })
+                        .catch(function(error) {
+                            console.log('❌ SW registration failed:', error);
+                        });
+                });
+            }
+            
+            // Preload critical resources
+            const criticalResources = [
+                'src/css/performance.css',
+                'src/css/hero.css',
+                'src/css/portfolio.css',
+                'src/js/core.js'
+            ];
+            
+            criticalResources.forEach(function(url) {
+                const link = document.createElement('link');
+                link.rel = 'preload';
+                link.href = url;
+                link.as = url.endsWith('.css') ? 'style' : 'script';
+                document.head.appendChild(link);
+            });
+            
+            // Optimize scroll performance
+            let ticking = false;
+            function updateScrollPosition() {
+                document.documentElement.style.setProperty('--scroll', window.pageYOffset + 'px');
+                ticking = false;
+            }
+            
+            window.addEventListener('scroll', function() {
+                if (!ticking) {
+                    requestAnimationFrame(updateScrollPosition);
+                    ticking = true;
+                }
+            }, { passive: true });
+            
+            // Lazy load images when they're about to enter viewport
+            if ('IntersectionObserver' in window) {
+                const imageObserver = new IntersectionObserver(function(entries) {
+                    entries.forEach(function(entry) {
+                        if (entry.isIntersecting) {
+                            const img = entry.target;
+                            if (img.dataset.src) {
+                                img.src = img.dataset.src;
+                                img.removeAttribute('data-src');
+                                img.classList.add('loaded');
+                                imageObserver.unobserve(img);
+                            }
+                        }
+                    });
+                }, { rootMargin: '50px' });
+                
+                // Observe all images with data-src
+                document.addEventListener('DOMContentLoaded', function() {
+                    document.querySelectorAll('img[data-src]').forEach(function(img) {
+                        imageObserver.observe(img);
+                    });
+                });
+            }
+            
+            // Performance monitoring
+            window.addEventListener('load', function() {
+                // Log Core Web Vitals
+                if ('web-vital' in window) {
+                    getCLS(console.log);
+                    getFID(console.log);
+                    getFCP(console.log);
+                    getLCP(console.log);
+                    getTTFB(console.log);
+                }
+                
+                // Log basic performance metrics
+                const perfData = performance.getEntriesByType('navigation')[0];
+                if (perfData) {
+                    console.log('📊 Performance Metrics:');
+                    console.log(`  DOM Content Loaded: ${perfData.domContentLoadedEventEnd - perfData.domContentLoadedEventStart}ms`);
+                    console.log(`  Load Complete: ${perfData.loadEventEnd - perfData.loadEventStart}ms`);
+                    console.log(`  Total Load Time: ${perfData.loadEventEnd - perfData.fetchStart}ms`);
+                }
+            });
+        })();
+    </script>
+    
+    <!-- Deferred JavaScript -->
+    <script defer src="src/js/core.js"></script>
+    
+    <!-- Analytics (placeholder for future use) -->
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script> -->
 </body>
 </html>

@@ -1,0 +1,126 @@
+{
+  "name": "fluxlove Portfolio",
+  "short_name": "fluxlove",
+  "description": "Strategic Communicator • Visual Storyteller • Artist - Multidisciplinary creative professional combining strategic communication expertise with artistic vision.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0a0f",
+  "theme_color": "#7c3aed",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "en",
+  "dir": "ltr",
+  "categories": ["lifestyle", "entertainment", "productivity"],
+  "screenshots": [
+    {
+      "src": "src/assets/images/screenshot-desktop.jpg",
+      "sizes": "1280x720",
+      "type": "image/jpeg",
+      "platform": "wide",
+      "label": "Desktop view of fluxlove portfolio"
+    },
+    {
+      "src": "src/assets/images/screenshot-mobile.jpg", 
+      "sizes": "375x667",
+      "type": "image/jpeg",
+      "platform": "narrow",
+      "label": "Mobile view of fluxlove portfolio"
+    }
+  ],
+  "icons": [
+    {
+      "src": "src/assets/images/icon-72.png",
+      "sizes": "72x72",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "src/assets/images/icon-96.png",
+      "sizes": "96x96", 
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "src/assets/images/icon-128.png",
+      "sizes": "128x128",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "src/assets/images/icon-144.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "src/assets/images/icon-152.png",
+      "sizes": "152x152",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "src/assets/images/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "src/assets/images/icon-384.png",
+      "sizes": "384x384",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "src/assets/images/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "View Art Gallery",
+      "short_name": "Art",
+      "description": "Browse visual art and digital illustrations",
+      "url": "/pages/art-new.html",
+      "icons": [
+        {
+          "src": "src/assets/images/shortcut-art.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Watch Films",
+      "short_name": "Films", 
+      "description": "View documentary and narrative film work",
+      "url": "/pages/films-new.html",
+      "icons": [
+        {
+          "src": "src/assets/images/shortcut-films.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Professional Work",
+      "short_name": "Professional",
+      "description": "Strategic communication and consulting experience",
+      "url": "/pages/strategic-communicator.html", 
+      "icons": [
+        {
+          "src": "src/assets/images/shortcut-professional.png",
+          "sizes": "96x96"
+        }
+      ]
+    }
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false,
+  "edge_side_panel": {
+    "preferred_width": 400
+  },
+  "launch_handler": {
+    "client_mode": "navigate-existing"
+  }
+}

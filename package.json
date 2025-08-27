@@ -1,25 +1,42 @@
 {
-  "name": "creative-portfolio-site",
-  "version": "1.0.0",
-  "description": "A personal website to showcase art, videos, poetry, and creativity.",
-  "main": "src/index.html",
+  "name": "fluxlove-portfolio",
+  "version": "2.0.0",
+  "description": "A premium creative portfolio showcasing multidisciplinary work across art, film, music, and strategic communication",
+  "main": "index.html",
   "scripts": {
-    "start": "live-server .",
-    "dev": "live-server src",
+    "start": "live-server . --port=3000 --open=/",
+    "dev": "live-server src --port=3001 --open=/",
     "build": "node build.js",
-    "test": "echo 'Test step can be added here'"
+    "build:prod": "node build-prod.js",
+    "test": "echo 'Test step can be added here'",
+    "analyze": "node analyze-bundle.js",
+    "lighthouse": "lighthouse http://localhost:3000 --output html --output-path ./lighthouse-report.html"
   },
   "keywords": [
     "portfolio",
+    "creative",
     "art",
-    "videos",
-    "poetry",
-    "creative"
+    "film",
+    "music",
+    "strategic communication",
+    "visual storytelling",
+    "multimedia",
+    "artist",
+    "filmmaker",
+    "writer"
   ],
-  "author": "Client Name",
+  "author": "fluxlove",
   "license": "MIT",
   "dependencies": {},
   "devDependencies": {
-    "live-server": "^1.2.1"
-  }
+    "live-server": "^1.2.1",
+    "terser": "^5.24.0",
+    "clean-css": "^5.3.2",
+    "html-minifier": "^4.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
 }

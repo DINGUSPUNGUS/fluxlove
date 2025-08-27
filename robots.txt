@@ -1,0 +1,23 @@
+User-agent: *
+Allow: /
+
+# Block access to source files and development directories
+Disallow: /src/assets/Films/
+Disallow: /src/assets/Music/
+Disallow: /src/assets/Professional/
+Disallow: /src/assets/writing/
+Disallow: *.txt
+Disallow: *.docx
+Disallow: *.odt
+Disallow: *.pdf
+
+# Allow access to optimized assets
+Allow: /src/css/
+Allow: /src/js/
+Allow: /src/assets/images/
+
+# Crawl-delay to be respectful
+Crawl-delay: 1
+
+# Preferred sitemap location
+Sitemap: https://fluxlove.com/sitemap.xml

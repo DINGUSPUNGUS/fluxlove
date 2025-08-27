@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" 
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+    
+    <!-- Homepage -->
+    <url>
+        <loc>https://fluxlove.com/</loc>
+        <lastmod>2025-08-27</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+        <image:image>
+            <image:loc>https://fluxlove.com/src/assets/images/og-image.jpg</image:loc>
+            <image:title>fluxlove Portfolio Homepage</image:title>
+            <image:caption>Strategic Communicator, Visual Storyteller, Artist</image:caption>
+        </image:image>
+    </url>
+    
+    <!-- Art Gallery -->
+    <url>
+        <loc>https://fluxlove.com/src/pages/art-new.html</loc>
+        <lastmod>2025-08-27</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <!-- Films Portfolio -->
+    <url>
+        <loc>https://fluxlove.com/src/pages/films-new.html</loc>
+        <lastmod>2025-08-27</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <!-- Music & Performance -->
+    <url>
+        <loc>https://fluxlove.com/src/pages/music-new.html</loc>
+        <lastmod>2025-08-27</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <!-- Academic Writing -->
+    <url>
+        <loc>https://fluxlove.com/src/pages/poetry-new.html</loc>
+        <lastmod>2025-08-27</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <!-- Professional Work -->
+    <url>
+        <loc>https://fluxlove.com/src/pages/strategic-communicator.html</loc>
+        <lastmod>2025-08-27</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <!-- Visual Storytelling -->
+    <url>
+        <loc>https://fluxlove.com/src/pages/visual-storyteller.html</loc>
+        <lastmod>2025-08-27</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <!-- Education -->
+    <url>
+        <loc>https://fluxlove.com/src/pages/education.html</loc>
+        <lastmod>2025-08-27</lastmod>
+        <changefreq>quarterly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <!-- Awards -->
+    <url>
+        <loc>https://fluxlove.com/src/pages/awards.html</loc>
+        <lastmod>2025-08-27</lastmod>
+        <changefreq>quarterly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <!-- Volunteering -->
+    <url>
+        <loc>https://fluxlove.com/src/pages/volunteering.html</loc>
+        <lastmod>2025-08-27</lastmod>
+        <changefreq>quarterly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <!-- About -->
+    <url>
+        <loc>https://fluxlove.com/src/pages/about-new.html</loc>
+        <lastmod>2025-08-27</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+</urlset>
