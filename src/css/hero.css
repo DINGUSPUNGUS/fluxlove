@@ -1,50 +1,59 @@
 /* ✨ FLUXLOVE - Premium Hero & Layout Components ✨ */
 
-/* Hero Section - Google-Level Polish */
+/* Hero Section - Ultra Premium Polish */
 .hero {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     position: relative;
-    padding: var(--section-padding) 0;
+    padding: var(--section-padding) var(--container-padding);
+    max-width: var(--container-max);
+    margin: 0 auto;
     background: 
-        radial-gradient(circle at 30% 20%, rgba(var(--primary-rgb), 0.1) 0%, transparent 50%),
-        radial-gradient(circle at 70% 80%, rgba(var(--secondary-rgb), 0.08) 0%, transparent 50%),
-        radial-gradient(circle at 20% 60%, rgba(var(--accent-rgb), 0.06) 0%, transparent 50%);
+        radial-gradient(circle at 30% 20%, rgba(var(--primary-rgb), 0.12) 0%, transparent 50%),
+        radial-gradient(circle at 70% 80%, rgba(var(--secondary-rgb), 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 20% 60%, rgba(var(--accent-rgb), 0.08) 0%, transparent 50%);
     overflow: hidden;
 }
 
 .hero::before {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    top: -50%;
+    left: -50%;
+    right: -50%;
+    bottom: -50%;
     background: 
-        linear-gradient(135deg, transparent 0%, rgba(var(--primary-rgb), 0.03) 50%, transparent 100%),
-        linear-gradient(45deg, rgba(var(--accent-rgb), 0.02) 0%, transparent 50%);
-    animation: heroGlow 30s ease-in-out infinite;
+        linear-gradient(135deg, transparent 0%, rgba(var(--primary-rgb), 0.04) 50%, transparent 100%),
+        linear-gradient(45deg, rgba(var(--accent-rgb), 0.03) 0%, transparent 50%);
+    animation: heroGlow 40s ease-in-out infinite;
     will-change: opacity, transform;
+    z-index: 1;
 }
 
 @keyframes heroGlow {
     0%, 100% {
-        opacity: 0.5;
+        opacity: 0.6;
         transform: scale(1) rotate(0deg);
     }
-    50% {
+    25% {
         opacity: 1;
-        transform: scale(1.05) rotate(1deg);
+        transform: scale(1.1) rotate(1deg);
+    }
+    50% {
+        opacity: 0.8;
+        transform: scale(1.05) rotate(-0.5deg);
+    }
+    75% {
+        opacity: 1;
+        transform: scale(1.08) rotate(0.8deg);
     }
 }
 
 .hero-content {
     flex: 1;
     max-width: 600px;
-    padding: 0 var(--container-padding);
-    text-align: left;
     z-index: 2;
     position: relative;
 }
@@ -60,20 +69,38 @@
     -webkit-text-fill-color: transparent;
     letter-spacing: -0.04em;
     position: relative;
-    animation: titleReveal 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    animation: titleReveal 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.hero-title::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: inherit;
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: titleGlow 3s ease-in-out infinite;
 }
 
 @keyframes titleReveal {
     0% {
         opacity: 0;
-        transform: translateY(50px) scale(0.9);
-        filter: blur(10px);
+        transform: translateY(80px) scale(0.8);
+        filter: blur(20px);
     }
     100% {
         opacity: 1;
         transform: translateY(0) scale(1);
         filter: blur(0);
     }
+}
+
+@keyframes titleGlow {
+    0%, 100% { filter: brightness(1); }
+    50% { filter: brightness(1.2); }
 }
 
 .hero-subtitle {
@@ -230,40 +257,137 @@
 }
 
 .geometric-art {
-    width: 300px;
-    height: 300px;
+    width: 400px;
+    height: 400px;
     position: relative;
     animation: geometricFloat 20s ease-in-out infinite;
 }
 
+/* Enhanced multi-layer geometric shapes */
 .geometric-art::before,
 .geometric-art::after {
     content: '';
     position: absolute;
     border-radius: 50%;
     background: var(--gradient-aurora);
-    opacity: 0.6;
-    filter: blur(1px);
+    opacity: 0.3;
+    filter: blur(20px);
     animation: inherit;
 }
 
 .geometric-art::before {
-    width: 200px;
-    height: 200px;
+    width: 300px;
+    height: 300px;
     top: 50px;
     left: 50px;
-    animation-duration: 15s;
-    animation-direction: reverse;
+    background: conic-gradient(from 0deg, var(--primary), var(--secondary), var(--accent), var(--primary));
+    animation: rotate 25s linear infinite;
+    opacity: 0.2;
 }
 
 .geometric-art::after {
-    width: 150px;
-    height: 150px;
-    top: 75px;
-    left: 75px;
-    background: var(--gradient-primary);
-    animation-duration: 25s;
-    opacity: 0.4;
+    width: 200px;
+    height: 200px;
+    top: 100px;
+    left: 100px;
+    background: conic-gradient(from 180deg, var(--accent), var(--primary), var(--secondary), var(--accent));
+    animation: rotate 15s linear infinite reverse;
+    opacity: 0.15;
+    filter: blur(30px);
+}
+
+/* Central orb with premium glow */
+.geometric-art .central-orb {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: radial-gradient(circle at 30% 30%, 
+        rgba(var(--primary-rgb), 0.8), 
+        rgba(var(--accent-rgb), 0.4), 
+        transparent 70%);
+    border-radius: 50%;
+    box-shadow: 
+        0 0 50px rgba(var(--primary-rgb), 0.4),
+        0 0 100px rgba(var(--accent-rgb), 0.2),
+        inset 0 0 30px rgba(255, 255, 255, 0.1);
+    animation: pulse 4s ease-in-out infinite;
+}
+
+/* Floating particles */
+.geometric-art .particle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: var(--primary);
+    border-radius: 50%;
+    opacity: 0.6;
+    animation: particleFloat 8s ease-in-out infinite;
+}
+
+.geometric-art .particle:nth-child(2) {
+    top: 20%;
+    left: 30%;
+    animation-delay: 0s;
+    background: var(--secondary);
+}
+
+.geometric-art .particle:nth-child(3) {
+    top: 70%;
+    right: 25%;
+    animation-delay: 2s;
+    background: var(--accent);
+}
+
+.geometric-art .particle:nth-child(4) {
+    bottom: 30%;
+    left: 15%;
+    animation-delay: 4s;
+    background: var(--primary);
+}
+
+.geometric-art .particle:nth-child(5) {
+    top: 40%;
+    right: 10%;
+    animation-delay: 6s;
+    background: var(--secondary);
+}
+
+@keyframes particleFloat {
+    0%, 100% { 
+        transform: translateY(0px) scale(1);
+        opacity: 0.6;
+    }
+    50% { 
+        transform: translateY(-30px) scale(1.5);
+        opacity: 1;
+    }
+}
+
+@keyframes pulse {
+    0%, 100% { 
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.8;
+        box-shadow: 
+            0 0 50px rgba(var(--primary-rgb), 0.4),
+            0 0 100px rgba(var(--accent-rgb), 0.2),
+            inset 0 0 30px rgba(255, 255, 255, 0.1);
+    }
+    50% { 
+        transform: translate(-50%, -50%) scale(1.1);
+        opacity: 1;
+        box-shadow: 
+            0 0 80px rgba(var(--primary-rgb), 0.6),
+            0 0 150px rgba(var(--accent-rgb), 0.3),
+            inset 0 0 40px rgba(255, 255, 255, 0.2);
+    }
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
 }
 
 @keyframes geometricFloat {

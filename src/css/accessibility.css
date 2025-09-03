@@ -1,0 +1,244 @@
+/* ✨ FLUXLOVE - Premium Accessibility & UX Enhancements ✨ */
+
+/* Enhanced Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+/* Focus Management */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 6px;
+    background: var(--primary);
+    color: white;
+    padding: 8px;
+    text-decoration: none;
+    transition: top 0.3s;
+    z-index: 10000;
+    border-radius: 4px;
+}
+
+.skip-link:focus {
+    top: 6px;
+}
+
+/* Enhanced Focus Indicators */
+*:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+.btn:focus-visible {
+    outline-color: var(--text-light);
+    box-shadow: 0 0 0 4px rgba(var(--primary-rgb), 0.3);
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+    :root {
+        --primary: #6d28d9;
+        --secondary: #d97706;
+        --accent: #059669;
+        --text-color: #ffffff;
+        --text-muted: #d1d5db;
+        --border: #6b7280;
+    }
+    
+    .portfolio-card {
+        border-width: 2px;
+    }
+    
+    .btn {
+        border-width: 2px;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .main-nav,
+    .theme-toggle,
+    .hero-buttons,
+    .btn,
+    .loading-overlay,
+    .page-transition,
+    .mobile-nav {
+        display: none !important;
+    }
+    
+    .hero {
+        min-height: 400px;
+        page-break-after: always;
+    }
+    
+    .portfolio-card {
+        page-break-inside: avoid;
+        margin-bottom: 1rem;
+    }
+    
+    body {
+        background: white !important;
+        color: black !important;
+    }
+}
+
+/* Performance Optimizations */
+.performance-hint {
+    will-change: transform;
+    contain: layout style paint;
+}
+
+/* GPU Acceleration Helpers */
+.gpu-accelerated {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
+
+/* Intersection Observer Loading States */
+.lazy-load {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.lazy-load.loaded {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Enhanced Typography */
+.text-gradient {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Premium Shadows */
+.shadow-premium {
+    box-shadow: 
+        0 4px 6px -1px rgba(var(--primary-rgb), 0.1),
+        0 2px 4px -1px rgba(var(--primary-rgb), 0.06),
+        0 0 0 1px rgba(var(--primary-rgb), 0.05);
+}
+
+.shadow-premium-lg {
+    box-shadow: 
+        0 20px 25px -5px rgba(var(--primary-rgb), 0.1),
+        0 10px 10px -5px rgba(var(--primary-rgb), 0.04),
+        0 0 0 1px rgba(var(--primary-rgb), 0.05);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--gradient-primary);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-light);
+}
+
+/* Selection Styling */
+::selection {
+    background: rgba(var(--primary-rgb), 0.3);
+    color: var(--text-light);
+}
+
+/* Form Enhancements (for future forms) */
+input, textarea, select {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+/* Error States */
+.error-state {
+    border-color: #ef4444 !important;
+    box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1) !important;
+}
+
+/* Loading State for Content */
+.content-loading {
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        rgba(var(--primary-rgb), 0.1) 50%, 
+        transparent 100%);
+    background-size: 200% 100%;
+    animation: loading-pulse 2s ease-in-out infinite;
+}
+
+@keyframes loading-pulse {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+}
+
+/* Tooltip System */
+.tooltip {
+    position: relative;
+}
+
+.tooltip::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(var(--background-rgb), 0.95);
+    color: var(--text-light);
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.5rem;
+    font-size: var(--font-xs);
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 1000;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(var(--border-rgb), 0.2);
+}
+
+.tooltip:hover::after {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Status Indicators */
+.status-online {
+    position: relative;
+}
+
+.status-online::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    width: 8px;
+    height: 8px;
+    background: #10b981;
+    border-radius: 50%;
+    border: 2px solid var(--background);
+    animation: pulse-status 2s ease-in-out infinite;
+}
+
+@keyframes pulse-status {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}

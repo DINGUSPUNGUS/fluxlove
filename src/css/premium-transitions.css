@@ -1,0 +1,324 @@
+/* ✨ FLUXLOVE - Premium Page Transitions & Loading States ✨ */
+
+/* Premium Loading Overlay */
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--background);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                visibility 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.loading-overlay.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loading-spinner {
+    position: relative;
+    width: 60px;
+    height: 60px;
+}
+
+.loading-spinner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 3px solid transparent;
+    border-top: 3px solid var(--primary);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+.loading-spinner::after {
+    content: '';
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    width: 48px;
+    height: 48px;
+    border: 3px solid transparent;
+    border-bottom: 3px solid var(--secondary);
+    border-radius: 50%;
+    animation: spin 1.5s linear infinite reverse;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Premium Page Transition */
+.page-transition {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    z-index: 9998;
+    transform: translateX(-100%);
+    transition: transform 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.page-transition.active {
+    transform: translateX(0);
+}
+
+.page-transition::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--background);
+    transform: translateX(100%);
+    transition: transform 0.6s cubic-bezier(0.77, 0, 0.175, 1) 0.1s;
+}
+
+.page-transition.active::after {
+    transform: translateX(0);
+}
+
+/* Content Reveal Animations */
+.content-reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.content-reveal.revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Staggered animations for multiple elements */
+.content-reveal.delay-1 { transition-delay: 0.1s; }
+.content-reveal.delay-2 { transition-delay: 0.2s; }
+.content-reveal.delay-3 { transition-delay: 0.3s; }
+.content-reveal.delay-4 { transition-delay: 0.4s; }
+.content-reveal.delay-5 { transition-delay: 0.5s; }
+
+/* Premium Button Interactions */
+.btn {
+    position: relative;
+    overflow: hidden;
+    transform: translateZ(0);
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+    transition: left 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.btn:hover::before {
+    left: 100%;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(var(--primary-rgb), 0.3);
+}
+
+.btn:active {
+    transform: translateY(0);
+    transition-duration: 0.1s;
+}
+
+/* Premium Card Hover Effects */
+.portfolio-card {
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transform: translateZ(0);
+}
+
+.portfolio-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(var(--primary-rgb), 0.15);
+}
+
+.portfolio-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, 
+        rgba(var(--primary-rgb), 0.05) 0%, 
+        transparent 50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.portfolio-card:hover::before {
+    opacity: 1;
+}
+
+/* Smooth Scroll Progress */
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background: var(--gradient-primary);
+    z-index: 1000;
+    transition: width 0.1s ease-out;
+}
+
+/* Enhanced Theme Transition */
+.theme-transition {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: var(--gradient-primary);
+    z-index: 9997;
+    transform: translate(-50%, -50%);
+    transition: all 0.8s cubic-bezier(0.77, 0, 0.175, 1);
+    pointer-events: none;
+}
+
+.theme-transition.active {
+    width: 150vmax;
+    height: 150vmax;
+}
+
+/* Mobile Navigation Slide */
+.mobile-nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    background: rgba(var(--background-rgb), 0.98);
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    z-index: 9996;
+    transition: right 0.4s cubic-bezier(0.77, 0, 0.175, 1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.mobile-nav.active {
+    right: 0;
+}
+
+.mobile-nav .nav-link {
+    font-size: var(--font-2xl);
+    font-weight: 600;
+    opacity: 0;
+    transform: translateX(50px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.mobile-nav.active .nav-link {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.mobile-nav .nav-link:nth-child(1) { transition-delay: 0.1s; }
+.mobile-nav .nav-link:nth-child(2) { transition-delay: 0.15s; }
+.mobile-nav .nav-link:nth-child(3) { transition-delay: 0.2s; }
+.mobile-nav .nav-link:nth-child(4) { transition-delay: 0.25s; }
+.mobile-nav .nav-link:nth-child(5) { transition-delay: 0.3s; }
+
+/* Premium Loading States for Images */
+.image-loading {
+    position: relative;
+    overflow: hidden;
+}
+
+.image-loading::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--loading-shimmer);
+    background-size: 200% 100%;
+    animation: shimmer 2s ease-in-out infinite;
+}
+
+.image-loading img {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.image-loading.loaded img {
+    opacity: 1;
+}
+
+.image-loading.loaded::before {
+    display: none;
+}
+
+/* Intersection Observer Animations */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.animate-on-scroll.animate-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Premium Focus States */
+.btn:focus-visible,
+.nav-link:focus-visible,
+button:focus-visible,
+a:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+    .loading-overlay,
+    .page-transition,
+    .content-reveal,
+    .btn,
+    .portfolio-card,
+    .theme-transition,
+    .mobile-nav,
+    .animate-on-scroll {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
+    
+    .loading-spinner::before,
+    .loading-spinner::after {
+        animation: none !important;
+    }
+}

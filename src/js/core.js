@@ -65,7 +65,7 @@
     let currentThemeIndex = parseInt(localStorage.getItem("fluxlove-theme") || "0", 10);
     let isTransitioning = false;
 
-    // Optimized theme application
+    // Optimized theme application with premium transitions
     function applyTheme(index, skipTransition = false) {
         if (isTransitioning && !skipTransition) return;
         
@@ -76,13 +76,23 @@
 
         currentThemeIndex = index;
         
+        // Create smooth transition effect if not skipping
+        if (!skipTransition) {
+            isTransitioning = true;
+            // Simple transition without Promise for now
+            setTimeout(() => {
+                isTransitioning = false;
+            }, 300);
+        }
+
         // Use CSS custom properties for instant theme switching
         const root = document.documentElement;
         root.setAttribute('data-theme', theme.name);
         
-        // Apply theme colors
+        // Apply theme colors with smooth transitions
         Object.entries(theme.colors).forEach(([key, value]) => {
             root.style.setProperty(`--theme-${key}`, value);
+            root.style.setProperty(`--${key}`, value);
         });
 
         // Update UI elements
@@ -90,10 +100,6 @@
         
         // Store preference
         localStorage.setItem("fluxlove-theme", index.toString());
-        
-        if (!skipTransition) {
-            createThemeTransition();
-        }
         
         perf.measure('Theme applied', 'theme-start');
     }

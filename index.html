@@ -76,7 +76,7 @@
     <!-- Critical CSS (inline for performance) -->
     <style>
         /* Critical CSS for above-the-fold content */
-        *,*::before,*::after{box-sizing:border-box}*{margin:0;padding:0}html,body{height:100%}body{line-height:1.6;-webkit-font-smoothing:antialiased;font-family:'Inter','SF Pro Display',-apple-system,BlinkMacSystemFont,'Segoe UI','Roboto',sans-serif;color:#f8fafc;overflow-x:hidden;font-weight:400;letter-spacing:0.01em;background:#0a0a0f}:root{--primary:#7c3aed;--primary-light:#a855f7;--primary-dark:#5b21b6;--secondary:#f59e0b;--secondary-light:#fbbf24;--accent:#10b981;--accent-light:#34d399;--background:#0a0a0f;--surface:#1a1a2e;--surface-light:#252545;--text-color:#f8fafc;--text-light:#ffffff;--text-muted:#a1a1aa;--border:#374151;--transition-smooth:0.3s cubic-bezier(0.4,0,0.2,1)}.main-nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(10,10,15,0.95);backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,255,255,0.1)}.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;position:relative;background:radial-gradient(circle at 20% 20%,rgba(99,102,241,0.08) 0%,transparent 50%),radial-gradient(circle at 80% 80%,rgba(245,158,11,0.08) 0%,transparent 50%)}
+        *,*::before,*::after{box-sizing:border-box}*{margin:0;padding:0}html,body{height:100%}body{line-height:1.6;-webkit-font-smoothing:antialiased;font-family:'Inter','SF Pro Display',-apple-system,BlinkMacSystemFont,'Segoe UI','Roboto',sans-serif;color:#f8fafc;overflow-x:hidden;font-weight:400;letter-spacing:0.01em;background:#0a0a0f}:root{--primary:#7c3aed;--primary-light:#a855f7;--primary-dark:#5b21b6;--secondary:#f59e0b;--secondary-light:#fbbf24;--accent:#10b981;--accent-light:#34d399;--background:#0a0a0f;--surface:#1a1a2e;--surface-light:#252545;--text-color:#f8fafc;--text-light:#ffffff;--text-muted:#a1a1aa;--border:#374151;--transition-smooth:0.3s cubic-bezier(0.4,0,0.2,1)}.main-nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(10,10,15,0.95);-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,255,255,0.1)}.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;position:relative;background:radial-gradient(circle at 20% 20%,rgba(99,102,241,0.08) 0%,transparent 50%),radial-gradient(circle at 80% 80%,rgba(245,158,11,0.08) 0%,transparent 50%)}
     </style>
     
     <!-- Stylesheets (non-critical) -->
@@ -84,12 +84,14 @@
     <link rel="preload" href="src/css/hero.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="preload" href="src/css/portfolio.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="preload" href="src/css/animations-optimized.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="src/css/accessibility.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="preload" href="src/css/themes.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript>
         <link rel="stylesheet" href="src/css/performance.css">
         <link rel="stylesheet" href="src/css/hero.css">
         <link rel="stylesheet" href="src/css/portfolio.css">
         <link rel="stylesheet" href="src/css/animations-optimized.css">
+        <link rel="stylesheet" href="src/css/accessibility.css">
         <link rel="stylesheet" href="src/css/themes.css">
     </noscript>
     
@@ -106,8 +108,7 @@
     
     <!-- Favicon & Icons -->
     <link rel="icon" type="image/svg+xml" href="/src/assets/images/favicon.svg">
-    <link rel="icon" type="image/png" href="/src/assets/images/favicon.png">
-    <link rel="apple-touch-icon" href="/src/assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/svg+xml" href="/src/assets/images/favicon.svg">
     
     <!-- Performance Hints -->
     <link rel="preload" href="src/js/main-new.js" as="script">
@@ -118,6 +119,9 @@
 <body>
     <!-- Animated background -->
     <div class="animated-bg"></div>
+    
+    <!-- Skip Link for Accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
     
     <!-- Navigation -->
     <nav class="main-nav">
@@ -146,33 +150,41 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1 class="hero-title">fluxlove</h1>
-            <p class="hero-subtitle">Strategic Communicator • Visual Storyteller • Artist</p>
-            <p class="hero-tagline">Where Creativity Meets Strategy</p>
-            <p class="hero-description">
-                A multidisciplinary creative professional combining strategic communication expertise 
-                with artistic vision to craft compelling narratives across digital, visual, and written mediums.
-            </p>
-            <div class="hero-buttons">
-                <a href="#portfolio" class="btn btn-primary">View Portfolio</a>
-                <a href="src/pages/about-new.html" class="btn btn-secondary">About Me</a>
+    <main id="main-content">
+        <section class="hero content-reveal">
+            <div class="hero-content">
+                <h1 class="hero-title">fluxlove</h1>
+                <p class="hero-subtitle">Strategic Communicator • Visual Storyteller • Artist</p>
+                <p class="hero-tagline">Where Creativity Meets Strategy</p>
+                <p class="hero-description">
+                    A multidisciplinary creative professional combining strategic communication expertise 
+                    with artistic vision to craft compelling narratives across digital, visual, and written mediums.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#portfolio" class="btn btn-primary">View Portfolio</a>
+                    <a href="src/pages/about-new.html" class="btn btn-secondary">About Me</a>
+                </div>
             </div>
-        </div>
-        <div class="hero-visual">
-            <div class="geometric-art"></div>
-        </div>
-    </section>
+            <div class="hero-visual">
+                <div class="geometric-art">
+                    <div class="central-orb"></div>
+                    <div class="particle"></div>
+                    <div class="particle"></div>
+                    <div class="particle"></div>
+                    <div class="particle"></div>
+                    <div class="particle"></div>
+                </div>
+            </div>
+        </section>
 
     <!-- Portfolio Preview -->
-    <section id="portfolio" class="portfolio-preview">
+    <section id="portfolio" class="portfolio-preview content-reveal delay-1">
         <div class="container">
-            <h2 class="section-title">Creative Portfolio</h2>
-            <p class="section-subtitle">Explore my work across various creative disciplines</p>
+            <h2 class="section-title animate-on-scroll">Creative Portfolio</h2>
+            <p class="section-subtitle animate-on-scroll">Explore my work across various creative disciplines</p>
             
             <div class="portfolio-grid">
-                <div class="portfolio-card" data-theme="creative">
+                <div class="portfolio-card animate-on-scroll delay-1" data-theme="creative">
                     <div class="card-image art-preview"></div>
                     <div class="card-content">
                         <h3>Visual Art</h3>
@@ -181,7 +193,7 @@
                     </div>
                 </div>
 
-                <div class="portfolio-card" data-theme="professional">
+                <div class="portfolio-card animate-on-scroll delay-2" data-theme="professional">
                     <div class="card-image video-preview"></div>
                     <div class="card-content">
                         <h3>Film & Video</h3>
@@ -190,7 +202,7 @@
                     </div>
                 </div>
 
-                <div class="portfolio-card" data-theme="party">
+                <div class="portfolio-card animate-on-scroll delay-3" data-theme="party">
                     <div class="card-image music-preview"></div>
                     <div class="card-content">
                         <h3>Music & Performance</h3>
@@ -199,7 +211,7 @@
                     </div>
                 </div>
 
-                <div class="portfolio-card" data-theme="creative">
+                <div class="portfolio-card animate-on-scroll delay-4" data-theme="creative">
                     <div class="card-image writing-preview"></div>
                     <div class="card-content">
                         <h3>Academic Writing</h3>
@@ -208,7 +220,7 @@
                     </div>
                 </div>
 
-                <div class="portfolio-card" data-theme="professional">
+                <div class="portfolio-card animate-on-scroll delay-5" data-theme="professional">
                     <div class="card-image professional-preview"></div>
                     <div class="card-content">
                         <h3>Professional Work</h3>
@@ -217,7 +229,7 @@
                     </div>
                 </div>
 
-                <div class="portfolio-card" data-theme="party">
+                <div class="portfolio-card animate-on-scroll delay-6" data-theme="party">
                     <div class="card-image story-preview"></div>
                     <div class="card-content">
                         <h3>Visual Storytelling</h3>
@@ -229,29 +241,30 @@
         </div>
     </section>
 
-    <!-- About Section -->
-    <section class="about-preview">
-        <div class="container">
-            <div class="about-content">
-                <div class="about-text">
-                    <h2>About fluxlove</h2>
-                    <p>
-                        I'm a multidisciplinary creative professional who thrives at the intersection of art, 
-                        strategy, and storytelling. With expertise spanning visual arts, film production, 
-                        academic writing, and strategic communication, I bring a unique perspective to every project.
-                    </p>
-                    <p>
-                        My work is driven by a passion for authentic storytelling and meaningful connection, 
-                        whether through a documentary film, a strategic campaign, or an intimate piece of art.
-                    </p>
-                    <a href="src/pages/about-new.html" class="btn btn-primary">Learn More</a>
-                </div>
-                <div class="about-image">
-                    <div class="profile-placeholder"></div>
+        <!-- About Section -->
+        <section class="about-preview content-reveal delay-2">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-text">
+                        <h2>About fluxlove</h2>
+                        <p>
+                            I'm a multidisciplinary creative professional who thrives at the intersection of art, 
+                            strategy, and storytelling. With expertise spanning visual arts, film production, 
+                            academic writing, and strategic communication, I bring a unique perspective to every project.
+                        </p>
+                        <p>
+                            My work is driven by a passion for authentic storytelling and meaningful connection, 
+                            whether through a documentary film, a strategic campaign, or an intimate piece of art.
+                        </p>
+                        <a href="src/pages/about-new.html" class="btn btn-primary">Learn More</a>
+                    </div>
+                    <div class="about-image">
+                        <div class="profile-placeholder"></div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer class="main-footer">
